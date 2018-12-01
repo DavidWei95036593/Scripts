@@ -660,31 +660,31 @@ scripts = [
       #for multiplayer mode
       (assign, "$g_multiplayer_selected_map", multiplayer_scenes_begin),
       (assign, "$g_multiplayer_respawn_period", 5),
-      (assign, "$g_multiplayer_round_max_seconds", 300),
+      (assign, "$g_multiplayer_round_max_seconds", 750),
       (assign, "$g_multiplayer_game_max_minutes", 30),
-      (assign, "$g_multiplayer_game_max_points", 300),
+      (assign, "$g_multiplayer_game_max_points", 3),
 
       (server_get_renaming_server_allowed, "$g_multiplayer_renaming_server_allowed"),
       (server_get_changing_game_type_allowed, "$g_multiplayer_changing_game_type_allowed"),
       (assign, "$g_multiplayer_point_gained_from_flags", 100),
       (assign, "$g_multiplayer_point_gained_from_capturing_flag", 5),
-      (assign, "$g_multiplayer_game_type", 0),
+      (assign, "$g_multiplayer_game_type", multiplayer_game_type_team_deathmatch),
       (assign, "$g_multiplayer_team_1_faction", "fac_britain"),
-      (assign, "$g_multiplayer_team_2_faction", "fac_france"),
-      (assign, "$g_multiplayer_next_team_1_faction", "$g_multiplayer_team_1_faction"),
-      (assign, "$g_multiplayer_next_team_2_faction", "$g_multiplayer_team_2_faction"),
+      (assign, "$g_multiplayer_team_2_faction", "fac_russia"),
+      (assign, "$g_multiplayer_next_team_1_faction", "fac_britain"),
+      (assign, "$g_multiplayer_next_team_2_faction", "fac_russia"),
       (assign, "$g_multiplayer_num_bots_team_1", 0),
       (assign, "$g_multiplayer_num_bots_team_2", 0),
       (assign, "$g_multiplayer_number_of_respawn_count", 0),
-      (assign, "$g_multiplayer_num_bots_voteable", 50),
+      (assign, "$g_multiplayer_num_bots_voteable", 0),
       (assign, "$g_multiplayer_max_num_bots", 251),
-      (assign, "$g_multiplayer_factions_voteable", 1),
-      (assign, "$g_multiplayer_maps_voteable", 1),
-      (assign, "$g_multiplayer_kick_voteable", 1),
-      (assign, "$g_multiplayer_ban_voteable", 1),
+      (assign, "$g_multiplayer_factions_voteable", 0),
+      (assign, "$g_multiplayer_maps_voteable", 0),
+      (assign, "$g_multiplayer_kick_voteable", 0),
+      (assign, "$g_multiplayer_ban_voteable", 0),
       (assign, "$g_multiplayer_valid_vote_ratio", 51), #more than 50 percent
-      (assign, "$g_multiplayer_auto_team_balance_limit", 3), #auto balance when difference is more than 2
-      (assign, "$g_multiplayer_player_respawn_as_bot", 1),
+      (assign, "$g_multiplayer_auto_team_balance_limit", 1000), #auto balance when difference is more than 2
+      (assign, "$g_multiplayer_player_respawn_as_bot", 0),
       (assign, "$g_multiplayer_stats_chart_opened_manually", 0),
       (assign, "$g_multiplayer_mission_end_screen", 0),
       (assign, "$g_multiplayer_ready_for_spawning_agent", 1),
@@ -692,10 +692,10 @@ scripts = [
       (assign, "$g_multiplayer_allow_player_banners", 1),
       
       # Vincenzo begin
-      (assign, "$g_auto_kick", 1),
+      (assign, "$g_auto_kick", 0),
       (assign, "$g_max_teamkills_before_kick", 5),
       (assign, "$g_auto_horse", 1),
-      (assign, "$g_auto_swap", 0),
+      (assign, "$g_auto_swap", 1),
       (assign, "$g_next_auto_admin_slot",0),
       (assign, "$g_next_auto_admin_slot_2",100),
 
@@ -734,11 +734,11 @@ scripts = [
       (assign,"$g_explosives_available_on_map",1),
       
       (assign, "$g_use_class_limits", 1),
-      (assign, "$g_use_class_limits_player_count", 13),
+      (assign, "$g_use_class_limits_player_count", 1),
       (assign, "$g_limit_grenadier", 30),
       (assign, "$g_limit_skirmisher", 20),
       (assign, "$g_limit_rifle", 100),
-      (assign, "$g_limit_cavalry", 30),
+      (assign, "$g_limit_cavalry", 0),
       (assign, "$g_limit_lancer", 50),
       (assign, "$g_limit_hussar", 100),
       (assign, "$g_limit_dragoon", 100),
@@ -749,11 +749,11 @@ scripts = [
       (assign, "$g_limit_sapper", 20),
       (assign, "$g_limit_musician", 1),
       (assign, "$g_limit_sergeant", 2),
-      (assign, "$g_limit_officer", 1),
-      (assign, "$g_limit_general", 1),     
+      (assign, "$g_limit_officer", 0),
+      (assign, "$g_limit_general", 0),     
       
-      (assign, "$g_team_1_max_build_points", 40),
-      (assign, "$g_team_2_max_build_points", 40),
+      (assign, "$g_team_1_max_build_points", 200),
+      (assign, "$g_team_2_max_build_points", 0),
       
       (assign, "$g_allow_multiple_firearms", 0), # disable doublegunning
       
@@ -775,11 +775,11 @@ scripts = [
         (assign, "$g_player_loops_begin", 0),
       (try_end),
       # Vincenzo end
-      
+	   
       #Beaver begin
       # Setting default build point costs for build props
       (store_add,":cost_index",construct_costs_offset,"spr_mm_stakes_construct"),
-      (troop_set_slot,"trp_track_select_dummy",":cost_index",5),
+      (troop_set_slot,"trp_track_select_dummy",":cost_index",1001),
       (store_add,":cost_index",construct_costs_offset,"spr_mm_stakes2_construct"),
       (troop_set_slot,"trp_track_select_dummy",":cost_index",4),
       (store_add,":cost_index",construct_costs_offset,"spr_sandbags_construct"),
@@ -791,7 +791,7 @@ scripts = [
       (store_add,":cost_index",construct_costs_offset,"spr_mm_fence1d"),
       (troop_set_slot,"trp_track_select_dummy",":cost_index",6),
       (store_add,":cost_index",construct_costs_offset,"spr_plank_construct_dummy"),
-      (troop_set_slot,"trp_track_select_dummy",":cost_index",1),
+      (troop_set_slot,"trp_track_select_dummy",":cost_index",1001),
       (store_add,":cost_index",construct_costs_offset,"spr_earthwork1_construct_dummy"),
       (troop_set_slot,"trp_track_select_dummy",":cost_index",4),
       (store_add,":cost_index",construct_costs_offset,"spr_crate_explosive"),
@@ -868,6 +868,8 @@ scripts = [
           (item_set_slot,":item",slot_item_multiplayer_item_class, multi_item_class_type_horse_howitzer),
         (try_end),
       (try_end),
+	  
+	  (assign, "$g_message_num", 0),
 
       #Beaver New
       (try_for_range,":troop_id",multiplayer_troops_begin,multiplayer_troops_end),
@@ -880,6 +882,10 @@ scripts = [
       (try_end),
       
       (server_set_add_to_game_servers_list, 1),
+	  (server_set_friendly_fire_damage_self_ratio, 30),
+	  (server_set_friendly_fire_damage_friend_ratio, 15),
+	  (server_set_control_block_dir, 1),
+	  (server_set_combat_speed, 4),
       ]),
 
 
@@ -3388,15 +3394,134 @@ scripts = [
      (agent_set_slot, ":agent_no", slot_agent_cur_reload_speed_modifier, 100),
      (agent_set_slot, ":agent_no", slot_agent_cur_use_speed_modifier, 100),
      (agent_set_slot, ":agent_no", slot_agent_cur_speed_modifier, 100),
-     
-     (try_begin),
+	   
+	 
+	  (try_begin),
        (neg|multiplayer_is_dedicated_server),
        (call_script,"script_client_get_my_agent"),
        (eq,reg0,":agent_no"),
        (assign, "$g_client_drown_sound_channel", -1),
        (assign, "$g_play_music_together", 0),
      (try_end),
-     
+	 
+	#Paper - SLOPPY
+	
+	
+     (agent_get_troop_id,":troop_id",":agent_no"),
+	(try_begin),
+	(neg|agent_is_non_player, ":agent_no"),
+	
+	(agent_get_player_id, ":player_no", ":agent_no"),
+	 
+	(player_get_kill_count, ":damage", ":player_no"),
+	(val_mul, ":damage", 4),
+	(val_add, ":damage", 100),
+	(agent_set_reload_speed_modifier,":agent_no", ":damage"),
+
+	(player_get_kill_count, ":damage", ":player_no"),
+	(val_mul, ":damage", 2),
+	(player_get_death_count, ":life", ":player_no"),
+	(val_mul, ":life", 4),
+	 
+	 (try_begin),
+	 (eq,":troop_id","trp_russian_partizan"),
+		
+		(val_add, ":damage", 90),
+	 	 (agent_set_damage_modifier, ":agent_no", ":damage"),
+	
+		(val_add, ":life", 31),
+	 	 (agent_set_max_hit_points, ":agent_no", ":life", 1),
+		 (agent_set_hit_points, ":agent_no", ":life", 1),
+		 
+		 (agent_set_speed_modifier,":agent_no", 115),
+	     (agent_set_slot, ":agent_no", slot_agent_underwater_time, 20),
+		 (agent_equip_item,":agent_no", "itm_rus_partizan2"),
+		 (store_random_in_range, ":random_zomb", 0 ,8), # So zombies get shovels to undig
+		 (try_begin),
+		 (eq, ":random_zomb", 1),
+		 (agent_equip_item,":agent_no", "itm_shovel"),
+		 (try_end),
+		 
+
+        (agent_get_item_slot, ":item_id", ":agent_no", 0),
+		(try_begin),
+          (eq,"itm_russian_dragoon_musket",":item_id"),
+		  (agent_unequip_item, ":agent_no", ":item_id", 1),
+		  (agent_equip_item,":agent_no", "itm_russian_peasant_2handed_axe"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_peasant_2handed_axe"),
+		(else_try),
+		  (eq, "itm_russian_gusarskiy_karabin", ":item_id"),
+		  (agent_unequip_item, ":agent_no", ":item_id", 1),
+		  (agent_equip_item,":agent_no", "itm_russian_gusarskiy_karabin_melee"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_gusarskiy_karabin_melee"),
+	  (try_end), 
+		 
+		# (neq|agent_is_non_player, ":agent_no"),
+		 (agent_get_player_id, ":player_no", ":agent_no"),
+		 (player_is_admin, ":player_no"),
+		 (agent_equip_item,":agent_no", "itm_brokenbottle"),
+		 (agent_equip_item,":agent_no", "itm_brokenbottle"),
+		 (agent_equip_item,":agent_no", "itm_brokenbottle"),
+		 
+	(else_try),
+	  (eq,":troop_id","trp_russian_opol"),
+	  (val_add, ":damage", 100),
+	  (agent_set_damage_modifier, ":agent_no", ":damage"),
+	  (val_add, ":life", 120),
+	  (agent_set_max_hit_points, ":agent_no", ":life", 1),
+	 # (agent_set_no_death_knock_down_only,":agent_no", 1),
+	  (agent_set_speed_modifier,":agent_no", 120),
+	  (agent_set_slot, ":agent_no", slot_agent_underwater_time, 20),
+	     (agent_equip_item,":agent_no", "itm_rus_partizan1"),
+		 (agent_equip_item,":agent_no", "itm_pirate_hat"),
+		 (agent_equip_item,":agent_no", "itm_brokenbottle"),
+		 (agent_equip_item,":agent_no", "itm_brokenbottle"),
+		 
+	  (try_for_range_backwards,":equipment_slot",ek_item_0,ek_head),
+        (agent_get_item_slot, ":item_id", ":agent_no", ":equipment_slot"),
+        (gt,":item_id",-1), # even have a item there?
+		(try_begin),
+          (this_or_next|eq,"itm_russian_dragoon_musket",":item_id"),
+		  (eq,"itm_russian_opolcheniye_pike",":item_id"),
+		  (val_add,":equipment_slot",1),
+		  (agent_unequip_item, ":agent_no", ":item_id", ":equipment_slot"),
+		(try_end),
+	  (try_end), 
+	  
+	  (store_random_in_range, ":random_weap", 0 ,7), # which random item?
+	  (try_begin),
+		  (eq, ":random_weap", 1),
+		  (agent_equip_item,":agent_no", "itm_russian_peasant_pike"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_peasant_pike"),
+	  (else_try),
+		  (eq, ":random_weap", 2),
+		  (agent_equip_item,":agent_no", "itm_birch_trunk"),
+		  (agent_set_wielded_item,":agent_no","itm_birch_trunk"),
+	  (else_try),
+		  (eq, ":random_weap", 3),
+		  (agent_equip_item,":agent_no", "itm_russian_peasant_2handed_axe"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_peasant_2handed_axe"),
+	  (else_try),
+		  (eq, ":random_weap", 4),
+		  (agent_equip_item,":agent_no", "itm_russian_dragoon_musket"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_dragoon_musket"),
+	  (else_try),
+		  (eq, ":random_weap", 5),
+		  (agent_equip_item,":agent_no", "itm_russian_peasant_pitchfork"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_peasant_pitchfork"),
+	  (else_try),
+		  (eq, ":random_weap", 6),
+		  (agent_equip_item,":agent_no", "itm_russian_peasant_kosa"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_peasant_kosa"),
+	  (else_try),
+		  (eq, ":random_weap", 0),
+		  (agent_equip_item,":agent_no", "itm_russian_peasant_club"),
+		  (agent_set_wielded_item,":agent_no","itm_russian_peasant_club"),
+	  (try_end),
+	 (try_end),
+	(try_end),
+	
+	 
      (try_begin),
        (agent_is_non_player, ":agent_no"),
        (assign, "$g_multiplayer_ready_for_spawning_agent", 1),
@@ -3427,6 +3552,7 @@ scripts = [
          
          (agent_equip_item,":agent_no","itm_rocket_placement"),
          (agent_set_wielded_item,":agent_no","itm_rocket_placement",0),
+		  
        (try_end),
        
        (try_begin),
@@ -3462,6 +3588,7 @@ scripts = [
            (call_script, "script_clean_up_prop_instance", ":cannon_instance"),
          (try_end),
        (try_end),
+	   
      (try_end),
      
      ]),
@@ -3484,6 +3611,14 @@ scripts = [
         
          (call_script, "script_multiplayer_send_initial_information", ":player_no"),
        (try_end),
+	   #paper
+	   (store_mission_timer_a, ":map_time"),
+	   (try_begin),
+	   (gt, ":map_time", 10),
+		(str_store_player_username, s1,":player_no"),
+		(str_store_string, s4, "str_s1_welcome"),
+		(multiplayer_send_string_to_player, ":player_no", multiplayer_event_show_server_message, s4),
+	   (try_end),
        
        # Protecting admin pass. If you want to enable this, just add the ids to the script its in the bottom of the file.
        (call_script, "script_multiplayer_server_protect_admin_password", ":player_no"),
@@ -3572,6 +3707,8 @@ scripts = [
            (call_script, "script_multiplayer_send_item_selections"),
            #Beaver End
          (try_end),
+		 
+		
          
          (call_script,"script_multiplayer_client_show_respawncounter"),
   
@@ -3759,6 +3896,59 @@ scripts = [
          (eq,":kill_type",kill_type_team),
          (assign,":score_change",-1),
        (try_end),
+	   
+	   
+	   #Paper's code - Zombie switching
+	   (try_begin),
+		 (eq,":kill_type",kill_type_enemy),
+		 (neq, "$g_multiplayer_game_type", multiplayer_game_type_deathmatch),
+		 (agent_get_troop_id, ":killer_troop_id", ":killer_agent_no"),
+		 (try_begin),
+		  (this_or_next|eq,":killer_troop_id","trp_russian_partizan_ai"),
+		  (this_or_next|eq,":killer_troop_id","trp_russian_partizan"),
+		  (eq,":killer_troop_id","trp_russian_opol"),
+		  (try_begin),
+		   (player_is_active, ":dead_agent_player"),
+           (player_set_team_no, ":dead_agent_player", ":killer_agent_team"),
+		   (player_set_troop_id, ":dead_agent_player", -1),
+		   #(call_script,"script_multiplayer_client_on_agent_killed_or_wounded_common",":dead_agent_no"),
+		   (multiplayer_send_message_to_player, ":dead_agent_player", multiplayer_event_force_start_team_selection),
+		   (str_store_string, s4, "str_infection"),
+		   (multiplayer_send_string_to_player, ":dead_agent_player", multiplayer_event_show_server_message, s4),
+		  (else_try),
+		   (agent_is_non_player, ":dead_agent_no"),
+		   (try_begin),
+			(eq, ":killer_agent_team", 1),
+			(val_add, "$g_multiplayer_num_bots_team_2", 1),
+			(val_sub, "$g_multiplayer_num_bots_team_1", 1),
+		   (else_try),
+			(val_add, "$g_multiplayer_num_bots_team_1", 1),
+			(val_sub, "$g_multiplayer_num_bots_team_2", 1),
+		   (try_end),
+		   (try_for_range, ":cur_player", "$g_player_loops_begin", multiplayer_player_loops_end),
+		    (player_is_active, ":cur_player"),
+		    (multiplayer_send_2_int_to_player, ":cur_player", multiplayer_event_return_num_bots_in_team, 1, "$g_multiplayer_num_bots_team_1"),
+			(player_is_active, ":cur_player"),
+            (multiplayer_send_2_int_to_player, ":cur_player", multiplayer_event_return_num_bots_in_team, 2, "$g_multiplayer_num_bots_team_2"),
+		   (try_end), 
+		  (try_end),
+		 (else_try),
+			(player_get_kill_count, ":damage", ":killer_agent_player"),
+			(val_mul, ":damage", 4),
+			(val_add, ":damage", 100),
+			(agent_set_reload_speed_modifier,":killer_agent_no", ":damage"),
+		 (try_end),
+		(else_try),
+			(eq,":kill_type",kill_type_self),
+			(eq, "$g_multiplayer_team_2_faction", "fac_russia"),
+			(player_get_team_no, ":team_no", ":dead_agent_player"),
+			(eq, ":team_no", 0),
+			(player_is_active, ":dead_agent_player"),
+            (player_set_team_no, ":dead_agent_player", 1),
+		    (player_set_troop_id, ":dead_agent_player", -1),
+		    (multiplayer_send_message_to_player, ":dead_agent_player", multiplayer_event_force_start_team_selection),
+		 (try_end),
+		 
        
        (try_begin), #adding 1 score points to agent which kills enemy agent at server
          (multiplayer_is_server),
@@ -4430,8 +4620,8 @@ scripts = [
           (assign,":color",colour_white),
         (else_try),
           (eq, ":multiplayer_message_type", multiplayer_message_type_admin),
-          (assign,":color",colour_magenta),
-          (display_message,s60,0xFF00FF),
+          (assign,":color",colour_green),
+          (display_message,s60,0x61C461),
         (try_end),
         
         (gt,":color",-1),
@@ -4819,6 +5009,7 @@ scripts = [
           (else_try),
             (ge, ":value", 0),
             (player_get_troop_id, ":player_troop_no", ":player_no"),
+			
             (is_between, ":player_troop_no", multiplayer_troops_begin, multiplayer_troops_end),
             (store_sub, ":troop_index", ":player_troop_no", multiplayer_troops_begin),
             (val_add, ":troop_index", slot_item_multiplayer_availability_linked_list_begin),
@@ -4903,11 +5094,16 @@ scripts = [
       
               (store_mission_timer_a, ":player_last_team_select_time"),         
               (player_set_slot, ":player_no", slot_player_last_team_select_time, ":player_last_team_select_time"),
-      
+			
+			
+			
+			
+			
               (multiplayer_send_message_to_player, ":player_no", multiplayer_event_return_confirmation),
             (try_end),
           (else_try),
             #reject request
+			(multiplayer_send_message_to_player, ":player_no", multiplayer_event_force_start_team_selection), #paper
             (multiplayer_send_message_to_player, ":player_no", multiplayer_event_return_rejection),
           (try_end),
         (try_end),
@@ -4970,7 +5166,6 @@ scripts = [
             (else_try),
               (assign,":class_ok",1),
             (try_end),
-            
             (try_begin),
               (eq, ":class_ok", 1), # give him the stuff
               (try_begin),
@@ -4989,6 +5184,7 @@ scripts = [
                   # (player_set_slot,":player_no",slot_player_bot_type_wanted,":bot_type"),
                 # (try_end),
               # (try_end),  
+			  
               
               (multiplayer_send_message_to_player, ":player_no", multiplayer_event_return_confirmation),
             (else_try),
@@ -7318,8 +7514,48 @@ scripts = [
             
             (assign,":allow_exposive",0),
           (try_end),
+		  
+  		#  (try_begin), #papex
+		#    (eq,":prop_type","spr_crate_explosive"),
+	#		(assign, ":num_ex", 1),
+	#		(try_for_range, ":prop_type", "spr_crate_explosive_fra","spr_crate_explosive_end"),
+	#		(scene_prop_get_num_instances, ":num_instances_of_scene_prop", ":prop_type"),     
+	#		  (try_for_range, ":cur_instance", 0, ":num_instances_of_scene_prop"),
+	#			(scene_prop_get_instance, ":cur_instance_id", ":prop_type", ":cur_instance"), 
+	#			(scene_prop_slot_eq,":cur_instance_id",scene_prop_slot_is_spawned,1),
+	#			(val_add, ":num_ex", 1),
+	#		  (try_end),
+	#		(try_end),
+	#		(store_add,":cost_index",construct_costs_offset,"spr_crate_explosive"),
+	#		(troop_set_slot,"trp_track_select_dummy",":cost_index",6),
+	#		(gt, ":num_ex", 2),
+	#		(store_add,":cost_index",construct_costs_offset,"spr_crate_explosive"),
+	#		(troop_set_slot,"trp_track_select_dummy",":cost_index",1001),
+			#(assign,":allow_exposive",0),
+		    #(multiplayer_send_2_int_to_player, ":player_no", multiplayer_event_show_multiplayer_message, multiplayer_message_type_error, "str_invalid_prop_select"),
+            #(multiplayer_send_message_to_player, ":player_no", multiplayer_event_return_rejection),
+	#	  (try_end),
         
           (eq,":allow_exposive",1),
+		  
+		  	(try_begin),
+			(eq,":prop_type","spr_crate_explosive"),
+			(assign, ":num_ex", 1), #papex
+			(try_for_range, ":prop_type", "spr_crate_explosive_fra","spr_crate_explosive_end"),
+			  (scene_prop_get_num_instances, ":num_instances_of_scene_prop", ":prop_type"),     
+			  (try_for_range, ":cur_instance", 0, ":num_instances_of_scene_prop"),
+				(scene_prop_get_instance, ":cur_instance_id", ":prop_type", ":cur_instance"), 
+				 (prop_instance_get_position,pos27,":cur_instance_id"),
+				 (position_get_z, ":pos_z", pos27),
+				 (ge, ":pos_z", -1000),
+				 (val_add, ":num_ex", 1),
+			  (try_end),
+			(try_end),
+			(try_begin),
+			(ge, ":num_ex", 2),
+				 (assign,"$g_explosives_available_on_map",0),
+			(try_end),
+			(try_end),
         
           (store_add,":cost_index",construct_costs_offset,":prop_type"),
           (troop_get_slot,":cost","trp_track_select_dummy",":cost_index"),
@@ -7333,7 +7569,7 @@ scripts = [
               (assign,":prop_type","spr_plank_destructible"),
             (else_try),
               (eq,":prop_type","spr_earthwork1_construct_dummy"),
-              (assign,":prop_type","spr_earthwork1_destructible"),
+              (assign,":prop_type","spr_earthwork1_destructible"), 
             (else_try),
               (eq,":prop_type","spr_crate_explosive"),
               (agent_get_troop_id,":troop_id",":player_no_agent_id"),
@@ -7369,7 +7605,9 @@ scripts = [
             (else_try),
               (val_sub,"$g_team_2_build_points",":cost"),
             (try_end),
-            
+
+		
+
             (try_for_range, ":player_no2", 1, multiplayer_player_loops_end), #0 is server no need to write it
               (player_is_active, ":player_no2"),
               (multiplayer_send_2_int_to_player, ":player_no2", multiplayer_event_return_build_points,"$g_team_1_build_points","$g_team_2_build_points"),
@@ -7644,7 +7882,7 @@ scripts = [
           (eq, ":event_type", multiplayer_event_use_item),
           (store_script_param, ":value", 3),
           (store_script_param, ":value_2", 4),
-          (call_script, "script_use_item", ":value", ":value_2"),
+          (call_script, "script_use_item", ":value", ":value_2"), ##
         (else_try),
           (eq, ":event_type", multiplayer_event_set_scene_prop_open_or_close),
           (store_script_param, ":instance_id", 3),       
@@ -8619,7 +8857,52 @@ scripts = [
      (store_script_param, ":player_no", 1),
      (store_script_param, ":team_no", 2),
      (assign, ":continue_change_team", 1),
-     (try_begin),
+	 
+	# Paper  -  Zombies can't switch if died once
+	 (player_get_team_no, ":cur_team", ":player_no"),
+	 (team_get_faction, ":cur_faction", ":cur_team"),
+	 (try_begin),
+	   (eq, ":team_no", 0),
+	   (this_or_next|eq, ":cur_team", multi_team_spectator),
+	   (eq, ":cur_faction", "fac_russia"),
+	     (store_mission_timer_a, ":round_time"),
+         (val_sub, ":round_time", "$g_round_start_time"),
+		 (player_get_death_count, ":player_deaths", ":player_no"),
+		 (store_mul,":time_check_value","$g_multiplayer_round_max_seconds",10), # can't go survivor after 10% of the round time is done
+         (val_div,":time_check_value",100),
+	    (try_begin),
+			 (this_or_next|gt,":player_deaths",0),
+			 (gt, ":round_time", ":time_check_value"),
+			 (neq,"$g_round_ended", 1),
+			 (assign, ":continue_change_team", 0),
+		(else_try),
+	 # Paper -Team select from 
+			(assign, ":number_of_players_at_team_1", 0),
+			(assign, ":number_of_players_at_team_2", 0),
+			(try_for_range, ":cur_player", "$g_player_loops_begin", multiplayer_player_loops_end),
+				(player_is_active, ":cur_player"),
+				(player_get_team_no, ":player_team", ":cur_player"),
+				(try_begin),
+					(eq, ":player_team", 0),
+					(val_add, ":number_of_players_at_team_1", 1),
+				(else_try),
+					(eq, ":player_team", 1),
+					(val_add, ":number_of_players_at_team_2", 1),
+				(try_end),         
+			(try_end),
+					
+			 #end of counting active players per team.
+			(store_add, ":total_players", ":number_of_players_at_team_1", ":number_of_players_at_team_2"),
+			(gt, ":total_players", 10),
+			(val_sub, ":number_of_players_at_team_2", 1),
+			(val_mul, ":number_of_players_at_team_2", 100),
+			(val_div, ":number_of_players_at_team_2", ":total_players"),
+			(lt, ":number_of_players_at_team_2", 6),
+			(assign, ":continue_change_team", 0),
+		(try_end),
+		
+	  
+     (else_try),
        (neq, "$g_multiplayer_game_type", multiplayer_game_type_deathmatch),
        (neq, "$g_multiplayer_game_type", multiplayer_game_type_duel),
        (neq, "$g_multiplayer_game_type", multiplayer_game_type_scene_making),
@@ -11110,8 +11393,10 @@ scripts = [
          (this_or_next|eq,":troop","trp_british_ship"),
          (this_or_next|eq,":troop","trp_french_ship"),
          (this_or_next|eq,":troop","trp_british_ship_cannon"),
+		 (this_or_next|eq,":troop","trp_russian_partizan"),
          (eq,":troop","trp_french_ship_cannon"),
          
+		 (this_or_next|eq,":item_slot",ek_foot),
          (eq,":item_slot",ek_body),
          
          (assign,":must_kick",0),
@@ -15364,16 +15649,20 @@ scripts = [
          (agent_is_alive, ":player_agent_id"),
          
          (player_get_kill_count, ":player_kill_count", ":player_no"), #adding 1 to his kill count, because he will lose 1 undeserved kill count for dying during team change
-         (val_add, ":player_kill_count", 1),
+         (assign, ":player_kill_count", 0),
+		 (val_add, ":player_kill_count", 1),
          (player_set_kill_count, ":player_no", ":player_kill_count"),
 
          (player_get_death_count, ":player_death_count", ":player_no"), #subtracting 1 to his death count, because he will gain 1 undeserved death count for dying during team change
-         (val_sub, ":player_death_count", 1),
-         (player_set_death_count, ":player_no", ":player_death_count"),
-
+		 (val_sub, ":player_death_count", ":player_death_count"),
+	  	 (val_sub, ":player_death_count", 1),
+         (player_set_death_count, ":player_no", ":player_death_count"), #PAPER
+		# (player_set_death_count, ":player_no", 0),
+		 
          (player_get_score, ":player_score", ":player_no"), #adding 1 to his score count, because he will lose 1 undeserved score for dying during team change
          (val_add, ":player_score", 1),
          (player_set_score, ":player_no", ":player_score"),
+		 (multiplayer_send_4_int_to_player, ":player_no", multiplayer_event_set_player_score_kill_death, ":player_no", ":player_score", ":player_kill_count", ":player_death_count"),
          
          (try_for_range, ":player_no2", 1, multiplayer_player_loops_end), #0 is server so starting from 1
            (player_is_active, ":player_no2"),
@@ -16706,7 +16995,7 @@ scripts = [
         (scene_prop_get_slot,":cur_child",":prop_instance_id",":cur_slot"),
         (gt,":cur_child",0), # has Child.
         #(neq,":cur_child",":ignored_prop_instance"), # not ignored.
-        #(neq,":cur_child",":ignored_prop_instance2"), # not ignored.
+        #(neq,":cur_child",":ignored_prop_instance2"), # not ignored.	
         (scene_prop_slot_eq,":cur_child",scene_prop_slot_is_active,1),
         
         (copy_position,pos58,pos57),
@@ -17400,7 +17689,29 @@ scripts = [
         (prop_instance_stop_animating,":instance_id"),
         (prop_instance_set_position,":instance_id",pos21),
       (try_end),
-      
+	  
+	  
+	  #Paper - Skulls
+	  (scene_prop_get_num_instances,":end_cond","spr_skeleton_head"),
+      (try_for_range,":cur_instance",0,":end_cond"),
+        (scene_prop_get_instance, ":instance_id", "spr_skeleton_head", ":cur_instance"),
+        (prop_instance_get_variation_id, ":is_active", ":instance_id"),
+		(eq, ":is_active", 1),
+        (scene_prop_set_slot,":instance_id",scene_prop_slot_in_use,1),      
+		(scene_prop_set_slot,":instance_id", scene_prop_slot_decision, 2),
+		(scene_prop_set_slot,":instance_id" , scene_prop_slot_time, 8),
+		(scene_prop_set_slot, ":instance_id", scene_prop_slot_acc_z,  0),
+		(scene_prop_set_slot, ":instance_id", scene_prop_slot_following,  -1),
+       
+        (prop_instance_get_starting_position, pos57, ":instance_id"),
+        (prop_instance_get_position,pos22,":instance_id"),
+        (get_distance_between_positions,":distance",pos57,pos22), # only move it back when its actually moved :P
+        (gt,":distance",0),
+        (prop_instance_stop_animating,":instance_id"),
+		 (call_script, "script_prop_instance_animate_to_position_with_childs", ":instance_id", 0,0,0),
+       # (prop_instance_set_position,":instance_id",pos21),
+      (try_end),
+	  
       # reset broken windows...
       (try_for_range,":prop_type", "spr_mm_window1d_poor", "spr_mm_window3_poor"),
         (scene_prop_get_num_instances, ":num_instances_of_scene_prop", ":prop_type"),     
@@ -17947,6 +18258,38 @@ scripts = [
         (scene_prop_set_slot,":instance_id",scene_prop_slot_in_use,1),      
       (try_end),
       
+	  #paper - Skulls 2
+	  (scene_prop_get_num_instances,":end_cond","spr_skeleton_head"),
+      (try_for_range,":cur_instance",0,":end_cond"),
+        (scene_prop_get_instance, ":instance_id", "spr_skeleton_head", ":cur_instance"),
+		(prop_instance_get_variation_id, ":is_active", ":instance_id"),
+        (prop_instance_get_variation_id_2, ":has_fire", ":instance_id"),
+		(eq, ":is_active", 1),
+        (scene_prop_set_slot,":instance_id",scene_prop_slot_in_use,1),  
+		(scene_prop_set_slot,":instance_id", scene_prop_slot_decision, 2),
+		(scene_prop_set_slot,":instance_id" , scene_prop_slot_time, 8),
+		(scene_prop_set_slot, ":instance_id", scene_prop_slot_acc_z,  0),
+		(scene_prop_set_slot, ":instance_id", scene_prop_slot_following,  -1),
+		(eq, ":has_fire", 1),
+		(scene_prop_get_num_instances,":2_end_cond","spr_fire_big"),
+		(assign, ":closest_fire", 0),
+		(assign, ":closest_fire_dist", 999999),
+		(prop_instance_get_position, pos30, ":instance_id"),
+		(try_for_range,":cur_fire_instance",0,":2_end_cond"),
+			  (scene_prop_get_instance, ":fire_id", "spr_fire_big", ":cur_fire_instance"),
+			  (prop_instance_get_position, pos31, ":fire_id"),
+			  (get_distance_between_positions, ":fire_dist",pos30, pos31),
+			  (lt, ":fire_dist", ":closest_fire_dist"),
+			  (assign, ":closest_fire", ":fire_id"),
+			  (assign, ":closest_fire_dist", ":fire_dist"),
+		(try_end),	
+
+		(scene_prop_set_slot, ":closest_fire", scene_prop_slot_parent_prop, ":instance_id"),
+		(scene_prop_set_slot, ":instance_id", scene_prop_slot_child_prop1, ":closest_fire"),
+		(scene_prop_set_slot,":closest_fire", scene_prop_slot_y_value, -20),
+		(scene_prop_set_slot,":instance_id", scene_prop_slot_is_active,1),
+		(scene_prop_set_slot,":closest_fire", scene_prop_slot_is_active,1),
+      (try_end),
 
       # Spawn windows.
       (try_for_range,":wall_type", "spr_mm_new_wall_1_1", "spr_mm_woodenwall1"),
@@ -19603,7 +19946,7 @@ scripts = [
        (else_try),
          (this_or_next|eq, ":item_class", multi_item_class_type_flag),
          (eq, ":item_class", multi_item_class_type_misc),
-         (val_add, ":num_colours_plus_one",1),
+         (val_add, ":num_colours_plus_one",1), 
        (else_try),
          (eq, ":item_class", multi_item_class_type_bullet),
          (val_add, ":num_bullets_plus_one",1),
@@ -19895,7 +20238,8 @@ scripts = [
       (player_is_active,":player_no"),
      
       (player_get_team_no, ":player_team", ":player_no"),
-      
+	  
+
       (call_script, "script_multiplayer_get_troop_class", ":troop_no"),
       (assign, ":player_troop_class", reg0),
       (assign, ":player_troop_rank", reg1),
@@ -19995,6 +20339,7 @@ scripts = [
       (try_end),
             
       #(assign, ":fail_type", 0),
+	  
       (try_begin),
         (this_or_next|eq, ":player_troop_class_to_use", multi_troop_class_mm_infantry),
         (this_or_next|eq, ":player_troop_class_to_use", multi_troop_class_mm_grenadier),
@@ -20176,8 +20521,33 @@ scripts = [
             (try_end),
           (try_end),
         (try_end),
-      (try_end),
-      
+		
+	 #Paper's code  -  Russians only partizani
+	    (try_begin),
+		 (is_between, ":troop_no", "trp_russian_opol_nco", "trp_austrian_infantry"), 
+		 (try_begin),
+		   (eq,":store_messages",1),
+		   (str_store_troop_name_plural, s21, ":troop_no"),
+		   (assign, ":fail_message", "str_already_to_many_players_class_s21"),
+		   (str_store_string, s4, "str_zombie_partizan"),
+		   (multiplayer_send_string_to_player, ":player_no", multiplayer_event_show_server_message, s4),
+		 (try_end),
+		 (assign, ":class_ok", 0),
+	    (else_try),
+		 (eq, ":troop_no", "trp_russian_opol"),
+		 (try_begin),
+		   (ge, ":count_of_troop", 1),
+		   (assign, ":class_ok", 0),
+		   (eq,":store_messages",1),
+		   (str_store_troop_name_plural, s21, ":troop_no"),
+		   (assign, ":fail_message", "str_already_to_many_players_class_s21"),
+		   (str_store_string, s4, "str_only_one_alpha"),
+		   (multiplayer_send_string_to_player, ":player_no", multiplayer_event_show_server_message, s4),
+		 (try_end),
+	    (try_end),
+		
+	  (try_end),
+	  
       (try_begin),
         (gt,":fail_message",-1),
         (str_store_string, s22, ":fail_message"),
@@ -22625,6 +22995,7 @@ scripts = [
           #(call_script,"script_explosion_at_position",":shooter_agent_no",1000,500), # Input: shooter_agent_no, max_damage points, range in cm
         (try_end),
       (try_end),
+	  
       
       # make a crator at the explosion position
       (try_begin),
@@ -22635,6 +23006,7 @@ scripts = [
       (try_end),
     (try_end),  		
   ]),
+  
   
   # script_get_angle_of_ground_at_pos
   # Input: pos37
@@ -26432,20 +26804,23 @@ scripts = [
       (assign,":is_ok",0),
       (try_begin),
         (eq,":item_id","itm_shovel"),
-        (neq,":ground_offset",0), # it is not 0 yet so raise it.
+        (lt,":ground_offset",0), # it is not 0 yet so raise it.
         
         (assign,":is_ok",1),
         
-        (val_add,":ground_offset",6), # Raise by 6 cm.
-        (val_min,":ground_offset",0),
+		(assign,":old_ground_offset",":ground_offset"),
+		(val_add,":ground_offset",6), # Raise by 6 cm.
+		(val_min,":ground_offset",0),
+		
+		(val_add,":health",12), # 25 hitpoints per hit with hammer.
+		(val_min,":health",":max_health"),
         
-        (val_add,":health",12), # 25 hitpoints per hit with hammer.
-        (val_min,":health",":max_health"),
-        
-        (assign,":z_change",6),
+		(val_sub, ":old_ground_offset", ":ground_offset"),
+		(val_abs, ":old_ground_offset"),
+        (assign,":z_change",":old_ground_offset"),
       (else_try),
         (eq,":item_id","itm_shovel_undig"),
-        (neq,":ground_offset",-100), # it is not below 1 meter underground then lower it.
+        (gt,":ground_offset",-100), # it is not below 1 meter underground then lower it.
         
         (assign,":is_ok",1),
         (assign,":z_change",-8),
@@ -26523,5 +26898,101 @@ scripts = [
        (ban_player, ":player_no", 0, 0), # first 0 == perm and second 0 == SERVER
      (try_end),
     ]),
+	
+	
+	
+  ("silent_explosion_at_position", 
+  [
+    (store_script_param, ":shooter_agent_no", 1),
+    (store_script_param, ":max_damage", 2),
+    (store_script_param, ":range", 3),
+
+    (try_begin),
+      (this_or_next|multiplayer_is_server),
+      (neg|game_in_multiplayer_mode),		
+			
+      (set_fixed_point_multiplier, 100), # Make sure we have centimeters as the fixed point
+      
+      (try_for_agents, ":agent_no"), 
+        (agent_is_active,":agent_no"),
+        (agent_is_alive,":agent_no"),
+		(agent_get_team, ":team", ":agent_no"),
+		(eq, ":team", 0),
+        (agent_get_position,pos46,":agent_no"),
+        (position_move_z,pos46,90), # Move 90 centimeter up (center of body) for better hit detection
+        (get_distance_between_positions,":cur_dist",pos46,pos47),
+
+        (lt, ":cur_dist", ":range"), # We are in range. lets calculate damage.. see here: for example.
+        
+        # Calculate damage 100-25% of damage according to range
+        # Damage = damage_max * (1 - ((0.75*distance)/range))   for our example:   40 * (1 - ((0.75*500)/800)) = 21.25  damage
+        (store_mul,":damage",":cur_dist",750),
+        (val_div,":damage",":range"),
+        (store_sub,":damage",1000,":damage"),
+        (val_mul,":damage",":max_damage"),
+        (val_div,":damage",1000),
+        
+        (try_begin), # If we have no shooter killed himself then.
+          (neg|agent_is_active,":shooter_agent_no"),
+          (assign,":shooter_agent_no",":agent_no"),
+        (try_end),
+        
+        (agent_deliver_damage_to_agent_advanced, ":unused", ":shooter_agent_no", ":agent_no", ":damage","itm_brokenbottle"),
+
+        (agent_is_alive,":agent_no"), # still alive? if not then do all this animation and sounds; otherwise the death will trigger those.
+        
+        # 56 is sound pos.
+        (copy_position,pos56,pos46),
+        (try_begin),
+          (agent_is_human,":agent_no"),
+          (call_script,"script_multiplayer_server_play_sound_at_position","snd_man_hit"),
+          (agent_get_horse, ":horse", ":agent_no"),
+          (try_begin),
+            (le, ":horse", 0), # No horse so play the fall animation
+            (agent_set_animation, ":agent_no", "anim_strike_fall_back_rise"),
+          (try_end),
+        (else_try),
+          (call_script,"script_multiplayer_server_play_sound_at_position","snd_neigh"),
+          (agent_set_animation, ":agent_no", "anim_horse_rear"),
+        (try_end),
+      (try_end), 	
+
+    (try_end),  		
+  ]),
   
+  # script_multiplayer_server_swap_player_to_team
+  # Input: arg1 = player_no
+  # Input: arg2 = team_no
+  # Output: none
+  ("multiplayer_server_swap_player_to_team",
+   [
+     (store_script_param, ":player_no", 1),
+	 (store_script_param, ":team_no", 2),
+     (assign, reg0, 0),
+     (try_begin),
+       (multiplayer_is_server),
+       (player_is_active, ":player_no"),
+	    # swap him     
+	   (player_get_team_no, ":player_team", ":player_no"),
+	   (try_begin),
+		(lt, ":player_team", multi_team_spectator),
+		(player_set_troop_id, ":player_no", -1),
+		(player_set_team_no, ":player_no", ":team_no"),
+		(multiplayer_send_message_to_player, ":player_no", multiplayer_event_force_start_team_selection),
+	   (try_end),
+	   
+		
+         (player_set_kill_count, ":player_no", 0),
+         (player_set_death_count, ":player_no", 0), #PAPER
+		 (player_set_score, ":player_no", 0),
+		 (multiplayer_send_4_int_to_player, ":player_no", multiplayer_event_set_player_score_kill_death, ":player_no", 0, 0, 0),
+         
+         (try_for_range, ":player_no2", 1, multiplayer_player_loops_end), #0 is server so starting from 1
+           (player_is_active, ":player_no2"),
+           (multiplayer_send_4_int_to_player, ":player_no2", multiplayer_event_set_player_score_kill_death, ":player_no", 0, 0, 0),
+         (try_end),
+      
+       (assign, reg0, 1), # script is ok.
+     (try_end),
+   ]),
 ]

@@ -111,7 +111,7 @@ Wolfgang Amadeus Mozart - Great mass in C minor - Gloria.^\
 Richard Wagner - Ritt der Valkuren.^\
 Antonin Dvorak - New world symphony (4th movement)^\
 Ludwig von Beethoven - Symphony No. 5 (1st movement)^\
-Georges Bizet - Toreador’s Song (from Carmen)^^\
+Georges Bizet - Toreadorï¿½s Song (from Carmen)^^\
 Neosounds.com^\
 Ludwig von Beethoven: Symphony no.9 - 4th Movement; By the New Age Symphony Orchestra^^\
 sounddogs.com^\
@@ -182,7 +182,7 @@ Mark 'Spunned' Echers^\
 David 'Fahausi/Kabs' Kappelhoff^\
 Ralf 'Fortune' van Daal^\
 Christian 'Condoz' Gruber^\
-Aitor 'Leberecht' Jiménez^\
+Aitor 'Leberecht' Jimï¿½nez^\
 Simon 'Finguin' B.C^\
 Lucas 'Nexus' Andrieu^\
 Valentin 'Vavas' Provost^\
@@ -238,7 +238,7 @@ EVP Sales:^Reena M Miranda^^\
 EVP Publishing:^Susana Meza^^\
 Executive Producer:^Mattias Lilja^^\
 Senior Producer:^Gordon Van Dyke^^\
-Producers:^Shams Jorjani^Jorgen Björklund^Staffan Berglen^^\
+Producers:^Shams Jorjani^Jorgen Bjï¿½rklund^Staffan Berglen^^\
 DLC Producer:^Jacob Munthe^^\
 QA Producer:^Erika S. Kling^^\
 "),
@@ -251,7 +251,7 @@ Marketing assets:^Veronica Gunlycke^2Coats Creations^^\
 Localization:^S&H Entertainment^^\
 Packaging & Manual layout:^Retrographics^^\
 Packshots:^Martin Doersam^^\
-Thanks to all our partners’ worldwide, in particular long-term partners^\
+Thanks to all our partnersï¿½ worldwide, in particular long-term partners^\
 and last, but not least, a special thanks to all forum members,^\
 operation partners and supporters, who are integral for our success.\
 "),
@@ -539,8 +539,11 @@ operation partners and supporters, who are integral for our success.\
   ("s1_captured_flag_reg0", "{s1} has captured {s0}!"),
   ("s1_pulling_flag_reg0", "{s1} has started capturing {s0}."),
 
-  ("s1_defended_castle", "{s1} defended their fort!"),
-  ("s1_captured_castle", "{s1} captured the fort!"),
+ # ("s1_defended_castle", "{s1} defended their fort!"),
+#("s1_captured_castle", "{s1} captured the fort!"),
+
+  ("s1_defended_castle", "The humans have survived!"),
+  ("s1_captured_castle", "Zombies killed all the humans!"),
 
   ("auto_team_balance_in_20_seconds", "Auto-balance will be done in 30 seconds."),
   ("auto_team_balance_next_round", "Auto-balance will be done next round."),
@@ -735,7 +738,7 @@ operation partners and supporters, who are integral for our success.\
   ("a_duel_between_you_and_s0_will_start_in_3_seconds", "A duel between you and {s0} will start in 3 seconds."),
   ("you_have_lost_a_duel", "You have lost a duel."),
   ("you_have_won_a_duel", "You have won a duel!"),
-  ("server_s0", "[SERVER]: {s0}"),
+  ("server_s0", "{s0}"),	#paper
   ("disallow_ranged_weapons", "Disallow ranged weapons"),
   ("ranged_weapons_are_disallowed", "Ranged weapons are disallowed."),
   ("ranged_weapons_are_allowed", "Ranged weapons are allowed."),
@@ -918,7 +921,7 @@ operation partners and supporters, who are integral for our success.\
   ("swap_player", "Swap Player"),
   ("swap_player_s2_s3", "{s2} Swapped Player {s3} to the opposite team."),
   ("swap_all","Swap Everyone"),
-  ("swap_all_s2","{s2} Swapped Everyone to the opposite team."),
+  ("swap_all_s2","{s2} Reset the teams."),
   ("forceautobalance_all","Force Autobalance"),
   ("forceautobalance_all_s2","{s2} Forced a Autobalance on the teams."),
   ("spec_player", "Swap Player to Spectators"),
@@ -1294,7 +1297,7 @@ operation partners and supporters, who are integral for our success.\
   ("mp_roxburgh_flag_2","Riverside Village"),
   ("mp_roxburgh_flag_3","Lakeside Villa"),
   ("mp_roxburgh_flag_4","Makers Village"),
-  ("mp_roxburgh_flag_5","Middleton’s Town"),
+  ("mp_roxburgh_flag_5","Middletonï¿½s Town"),
   ("mp_roxburgh_flag_6","Shrine"),
   ("mp_roxburgh_flag_7","Lumberjack's Lodge"),
 
@@ -1337,6 +1340,40 @@ operation partners and supporters, who are integral for our success.\
   ("mp_walloon_farm_flag_4","Farm"),
   ("mp_walloon_farm_flag_5","West Hill"),
   ("mp_walloon_farm_flag_6","Redoubt"),
+
+
+  #Paper
+  ("survivors_won_1", "The humans survived!"),
+  ("survivors_won_2", "The zombie threat has been eliminated"),
+  ("zombies_won_1", "The humans are all dead!"),
+  ("zombies_won_2", "The zombies killed everyone"),
+
+  ("s1_welcome", "{s1}, welcome to the THE SERVER NAME HERE"),
+
+  ("recruiting", "Big purple message"),
+
+  ("zombie_partizan", "You must select the partizan troop."),
+  ("only_one_alpha", "There can be only one alpha zombie."),
+
+  ("infection", "You have been infected!"),
+
+  ("notice1", "Select the line militia class to be an Alpha Zombies. It is a lot more powerful, but there can be only one."),
+  ("notice2", "Respect other players. No racism, discrimination and other rudeness will be tolerated."),
+  ("notice3", "As a zombie, try flanking the survivors to surprise them!"),
+  ("notice4", "Bottles sometimes explode when thrown, knocking down and hurting survivors in a small radius."),
+  ("notice5", "Survivors reload faster the more kills they get."),
+  ("notice6", "Being unreachable will get you banned."),
+  ("notice7", "Work together as survivors and watch each others back."),
+  ("notice8", "-----------------------------------------------------"),
+  ("notice9", "Zombies run faster than survivors. You won't be able to run forever."),
+  ("notice10", "Zombies get more health each time they die."),
+
+  ("skull_warning", "You feel death crawling under your skin."),
+
+  ("neg_val_s1", "{s2} is -{s1}"),
+  ("val_s1", "{s2} is {s1}"),
+  ("under_val_s1", "{s2} is <-{s1}"),
+  ("over_val_s1", "{s2} is >{s1}"),
 
 
 

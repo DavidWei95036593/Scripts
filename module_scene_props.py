@@ -4449,7 +4449,7 @@ scene_props = [
      ]),
  ]),
 
-  ("ze_treasure",spr_use_time(4),"chest_b","bo_ze_treasure", [
+  ("ze_treasure",spr_use_time(6),"chest_b","bo_ze_treasure", [
     (ti_on_scene_prop_use,
     [
       (store_trigger_param_1, ":agent_id"),
@@ -4468,14 +4468,14 @@ scene_props = [
         
       #  (agent_unequip_item, ":agent_id", ":item_id", ":equipment_slot"),
       #(try_end),
-      (try_begin),
-        (agent_get_item_slot, ":item_id", ":agent_id", 4), #ek_head
-        (gt,":item_id",-1), # even have a item there?
-        (agent_unequip_item, ":agent_id", ":item_id", 4), #ek_head
-      (try_end),
+    #  (try_begin),
+     #   (agent_get_item_slot, ":item_id", ":agent_id", 4), #ek_head
+     #   (gt,":item_id",-1), # even have a item there?
+     #   (agent_unequip_item, ":agent_id", ":item_id", 4), #ek_head
+     # (try_end),
       
       # add ze goodies.
-      (agent_equip_item,":agent_id","itm_pirate_hat"),
+      #(agent_equip_item,":agent_id","itm_pirate_hat"),
       #(agent_equip_item,":agent_id","itm_french_officer_pistol"),
       #(agent_equip_item,":agent_id","itm_pistol_ammo"),
       #(agent_equip_item,":agent_id","itm_spyglass"),
@@ -4484,11 +4484,22 @@ scene_props = [
       #(agent_set_wielded_item,":agent_id","itm_french_officer_pistol"),
       
       #(scene_prop_set_slot,":instance_id",scene_prop_slot_just_fired,1),
-      
-      (try_for_range, ":player_no", 1, multiplayer_player_loops_end), #0 is server so starting from 1
-        (player_is_active, ":player_no"),
-        (multiplayer_send_3_int_to_player, ":player_no", multiplayer_event_return_agent_set_item, ":agent_id", "itm_pirate_hat", 4),
-      (try_end),
+	  (agent_get_troop_id, ":troop", ":agent_id"),
+      (try_begin),
+		(this_or_next|eq, ":troop", "trp_russian_partizan"),
+		(eq, ":troop", "trp_russian_opol"),
+		(try_begin),
+			(agent_get_item_slot, ":item_id", ":agent_id", 3), 
+			(gt,":item_id",-1), # even have a item there?
+			(agent_unequip_item, ":agent_id", ":item_id", 4), 
+	    (try_end),
+		(agent_equip_item, ":agent_id", "itm_brokenbottle",4),
+		(agent_set_wielded_item,":agent_id","itm_brokenbottle"),
+		(try_for_range, ":player_no", 1, multiplayer_player_loops_end), #0 is server so starting from 1
+			(player_is_active, ":player_no"),
+			(multiplayer_send_3_int_to_player, ":player_no", multiplayer_event_return_agent_set_item, ":agent_id", "itm_brokenbottle", 3),
+		(try_end),
+	  (try_end),
     ]),
   ]),
  

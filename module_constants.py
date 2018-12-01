@@ -84,7 +84,7 @@ slot_troop_custom_banner_bg_type         = 16
 slot_troop_custom_banner_charge_type_1   = 17
 slot_troop_custom_banner_charge_type_2   = 18
 slot_troop_custom_banner_charge_type_3   = 19
-slot_troop_custom_banner_charge_type_4   = 20
+slot_troop_custom_banner_charge_tye_4   = 20
 slot_troop_custom_banner_flag_type       = 21
 slot_troop_custom_banner_num_charges     = 22
 slot_troop_custom_banner_positioning     = 23
@@ -129,6 +129,7 @@ slot_player_bot_type_wanted                    = 41
 slot_player_bot_type_spawned                   = 42
 slot_player_teamkills                          = 43
 slot_player_last_teamkill_at                   = 44
+slot_player_last_warning_at                   = 45
 
 ########################################################
 ##  TEAM SLOTS             #############################
@@ -195,6 +196,8 @@ scene_prop_slot_controller_agent    = 41
 scene_prop_slot_carrier_agent       = 42
 scene_prop_slot_linked_prop         = 43
 
+#scene_prop_slot_child_prop16        = 44
+
 scene_prop_slot_sound_effect        = 45
 scene_prop_slot_particle_effect1    = 46
 scene_prop_slot_particle_effect2    = 47
@@ -221,6 +224,10 @@ scene_prop_slot_child_prop16        = 66
 
 scene_prop_slots_begin              = scene_prop_open_or_close_slot
 scene_prop_slots_end                = 67
+scene_prop_slot_acc_z               		= 68
+scene_prop_slot_decision                 = 69
+scene_prop_slot_time2		                = 70
+scene_prop_slot_following		    = 71
 
 scene_prop_slots_defmin_begin       = scene_prop_slot_replaced_by
 
@@ -478,7 +485,7 @@ mm_destroyed_props_end       = "spr_mm_destroyed_props_end"
 
 mm_cannon_types_begin        = "spr_mm_cannon_12pdr"
 mm_cannon_types_end          = "spr_mm_cannons_end"
- 
+
 mm_cannon_wood_types_begin   = "spr_mm_cannon_12pdr_wood"
 mm_cannon_wood_types_end     = "spr_mm_cannon_12pdr_wheels"
 
@@ -730,7 +737,7 @@ cannon_command_fire         = 5
 cannon_command_stop_aim     = 6
 
 cannon_commands_begin         = cannon_command_up
-cannon_commands_end           = 7 
+cannon_commands_end           = 7
 
 
 kill_type_self          = 1
