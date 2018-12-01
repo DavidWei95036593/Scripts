@@ -12,9 +12,11 @@ from ID_factions import *
 ##  ITEM SLOTS             #############################
 ########################################################
 
-slot_item_multiplayer_item_class   = 1 #temporary, can be moved to higher values
-slot_item_multiplayer_item_class2   = 2 #temporary, can be moved to higher values
-slot_item_multiplayer_availability_linked_list_begin = 3 #temporary, can be moved to higher values
+slot_item_multiplayer_item_class   = 1
+slot_item_multiplayer_item_class2  = 2
+slot_item_royale_item_class        = 3 #unique for royale are the item classes (sadly)
+slot_item_multiplayer_gf           = 4 #patch1115 60/13
+slot_item_multiplayer_availability_linked_list_begin = 5 #temporary, can be moved to higher values
 
 
 ########################################################
@@ -50,7 +52,22 @@ slot_agent_map_overlay_id         = 22
 slot_agent_is_running_away        = 23
 slot_agent_courage_score          = 24
 slot_agent_state                  = 25
-slot_agent_walker_occupation      = 26
+
+slot_agent_last_build_at          = 27  #patch1115 fix 6/2
+slot_agent_healed_perc            = 28 # patch1115 surgeon
+slot_agent_royale_horse           = 29
+
+slot_agent_attached_prop_offset_x = 30
+slot_agent_attached_prop_offset_y = 31
+slot_agent_attached_prop_offset_z = 32
+
+slot_agent_track_ends_at          = 33
+
+slot_agent_has_fallen_off_horse   = 34
+slot_agent_god_mode               = 35 #patch1115 54/14
+
+slot_agent_last_rotz              = 36
+slot_agent_last_speed_same_count  = 37
 
 ########################################################
 ##  FACTION SLOTS          #############################
@@ -73,28 +90,32 @@ slot_troop_officer_troop               = 6
 slot_troop_scale_factor                = 7
 slot_troop_base_type                   = 8
 
+slot_troop_class                       = 10
+slot_troop_class_type                  = 11
+slot_troop_rank                        = 12
+slot_troop_rank_type                  = 13
 
-slot_troop_custom_banner_bg_color_1      = 10
-slot_troop_custom_banner_bg_color_2      = 11
-slot_troop_custom_banner_charge_color_1  = 12
-slot_troop_custom_banner_charge_color_2  = 13
-slot_troop_custom_banner_charge_color_3  = 14
-slot_troop_custom_banner_charge_color_4  = 15
-slot_troop_custom_banner_bg_type         = 16
-slot_troop_custom_banner_charge_type_1   = 17
-slot_troop_custom_banner_charge_type_2   = 18
-slot_troop_custom_banner_charge_type_3   = 19
-slot_troop_custom_banner_charge_tye_4   = 20
-slot_troop_custom_banner_flag_type       = 21
-slot_troop_custom_banner_num_charges     = 22
-slot_troop_custom_banner_positioning     = 23
-slot_troop_custom_banner_map_flag_type   = 24
+# slot_troop_custom_banner_bg_color_1      = 10
+# slot_troop_custom_banner_bg_color_2      = 11
+# slot_troop_custom_banner_charge_color_1  = 12
+# slot_troop_custom_banner_charge_color_2  = 13
+# slot_troop_custom_banner_charge_color_3  = 14
+# slot_troop_custom_banner_charge_color_4  = 15
+# slot_troop_custom_banner_bg_type         = 16
+# slot_troop_custom_banner_charge_type_1   = 17
+# slot_troop_custom_banner_charge_type_2   = 18
+# slot_troop_custom_banner_charge_type_3   = 19
+# slot_troop_custom_banner_charge_type_4   = 20
+# slot_troop_custom_banner_flag_type       = 21
+# slot_troop_custom_banner_num_charges     = 22
+# slot_troop_custom_banner_positioning     = 23
+# slot_troop_custom_banner_map_flag_type   = 24
 
 
 
-slot_troop_button_id              = 30
-slot_troop_button_2_id            = 31
-slot_troop_active_this_mission    = 32
+slot_troop_button_id              = 20
+slot_troop_button_2_id            = 21
+slot_troop_active_this_mission    = 22
 
 
 ########################################################
@@ -131,6 +152,19 @@ slot_player_teamkills                          = 43
 slot_player_last_teamkill_at                   = 44
 slot_player_last_warning_at                   = 45
 
+#slot_player_last_message_at          = 49  #patch1115
+#slot_player_message_count          = 50  #patch1115
+
+#patch1115 43/1 start
+slot_player_musician_spawned					   = 46
+slot_player_drummer_spawned					   = 47
+slot_player_flag_spawned					   = 48
+#patch1115 43/1 end
+#slot_player_god_mode                 = 48 #patch1115 54/14
+slot_player_revive_pos              = 49 #patch1115 46/16
+slot_player_formation_change              = 50
+slot_player_formation_change_2              = 51
+slot_player_bot_order              = 52
 ########################################################
 ##  TEAM SLOTS             #############################
 ########################################################
@@ -164,70 +198,105 @@ scene_prop_slot_z_rotation_limit    = 11
 scene_prop_slot_x_scale             = 12
 scene_prop_slot_y_scale             = 13
 scene_prop_slot_z_scale             = 14
-scene_prop_slot_x_extra             = 15
-scene_prop_slot_y_extra             = 16
-scene_prop_slot_z_extra             = 17
-scene_prop_slot_time                = 18
-scene_prop_slot_bounces             = 19
-scene_prop_slot_times_hit           = 20
-scene_prop_slot_owner_team          = 21
-scene_prop_slot_time_left           = 22
-scene_prop_slot_has_ball            = 23
-scene_prop_slot_is_loaded           = 24
-scene_prop_slot_is_active           = 25
-scene_prop_slot_just_fired          = 26
-scene_prop_slot_health              = 27
-scene_prop_slot_max_health          = 28
-scene_prop_slot_displayed_particle  = 29
-scene_prop_slot_ammo_type           = 30
-scene_prop_slot_ignore_inherit_movement = 31
-scene_prop_slot_float_ground        = 32
-scene_prop_slot_ground_offset       = 33
-scene_prop_slot_spawned_at          = 34
-scene_prop_slot_is_not_pushed_back  = 35
-scene_prop_slot_just_pushed_back    = 36
+scene_prop_slot_is_scaled           = 15
+scene_prop_slot_x_extra             = 16
+scene_prop_slot_y_extra             = 17
+scene_prop_slot_z_extra             = 18
+scene_prop_slot_time                = 19
+scene_prop_slot_bounces             = 20
+scene_prop_slot_times_hit           = 21
+scene_prop_slot_owner_team          = 22
+scene_prop_slot_time_left           = 23
+scene_prop_slot_has_ball            = 24
+scene_prop_slot_is_loaded           = 25
+scene_prop_slot_is_active           = 26
+scene_prop_slot_just_fired          = 27
+scene_prop_slot_health              = 28
+scene_prop_slot_max_health          = 29
+scene_prop_slot_displayed_particle  = 30
+scene_prop_slot_ammo_type           = 31
+scene_prop_slot_ignore_inherit_movement = 32
+scene_prop_slot_float_ground        = 33
+scene_prop_slot_ground_offset       = 34
+scene_prop_slot_spawned_at          = 35
+scene_prop_slot_is_not_pushed_back  = 36
+scene_prop_slot_just_pushed_back    = 37
+
+
+scene_prop_slot_destruct_wall_height            = 38
+scene_prop_slot_destruct_wall_width             = 39
+scene_prop_slot_destruct_wall_length            = 40
+scene_prop_slot_destruct_move_height_to_center  = 41
+scene_prop_slot_destruct_move_width_to_center   = 42
+scene_prop_slot_destruct_move_length_to_center  = 43
+scene_prop_slot_destruct_rotate_z_90            = 44
+scene_prop_slot_destruct_wall_height_offset     = 45
+scene_prop_slot_destruct_wall_width_offset      = 46
+scene_prop_slot_destruct_wall_length_offset     = 47
+scene_prop_slot_destruct_inverse_width_movement = 48
+scene_prop_slot_destruct_max_length             = 49
+
+scene_prop_slot_destruct_smoke_strength         = 50
 
 # under here slots that need -1 as default
-scene_prop_slot_replaced_by         = 37
-scene_prop_slot_replacing           = 38
-scene_prop_slot_last_hit_by         = 39
-scene_prop_slot_user_agent          = 40
-scene_prop_slot_controller_agent    = 41
-scene_prop_slot_carrier_agent       = 42
-scene_prop_slot_linked_prop         = 43
+scene_prop_slot_replaced_by         = 52
+scene_prop_slot_replacing           = 53
+scene_prop_slot_last_hit_by         = 54
+scene_prop_slot_user_agent          = 55
+scene_prop_slot_controller_agent    = 56
+scene_prop_slot_carrier_agent       = 57
+scene_prop_slot_linked_prop         = 58
 
-#scene_prop_slot_child_prop16        = 44
+scene_prop_slot_sound_effect        = 59
+scene_prop_slot_particle_effect1    = 60
+scene_prop_slot_particle_effect2    = 61
+scene_prop_slot_particle_effect3    = 62
+scene_prop_slot_particle_effect4    = 63
 
-scene_prop_slot_sound_effect        = 45
-scene_prop_slot_particle_effect1    = 46
-scene_prop_slot_particle_effect2    = 47
-scene_prop_slot_particle_effect3    = 48
-scene_prop_slot_particle_effect4    = 49
+scene_prop_slot_destruct_smoke_type             = 64
+scene_prop_slot_destruct_smoke_type2            = 65
+scene_prop_slot_destruct_particles_type         = 66
+scene_prop_slot_destruct_sound_id               = 67
+scene_prop_slot_destruct_pile_prop_begin        = 68
+scene_prop_slot_destruct_pile_prop_end          = 69
 
-scene_prop_slot_parent_prop         = 50
-scene_prop_slot_child_prop1         = 51
-scene_prop_slot_child_prop2         = 52
-scene_prop_slot_child_prop3         = 53
-scene_prop_slot_child_prop4         = 54
-scene_prop_slot_child_prop5         = 55
-scene_prop_slot_child_prop6         = 56
-scene_prop_slot_child_prop7         = 57
-scene_prop_slot_child_prop8         = 58
-scene_prop_slot_child_prop9         = 59
-scene_prop_slot_child_prop10        = 60
-scene_prop_slot_child_prop11        = 61
-scene_prop_slot_child_prop12        = 62
-scene_prop_slot_child_prop13        = 63
-scene_prop_slot_child_prop14        = 64
-scene_prop_slot_child_prop15        = 65
-scene_prop_slot_child_prop16        = 66
+# precalc the next stages because that saves us a lot of running of codes.
+scene_prop_slot_destruct_next_stage_1           = 70
+scene_prop_slot_destruct_next_stage_2           = 71
+scene_prop_slot_destruct_next_stage_3           = 72
+scene_prop_slot_destruct_next_stage_4           = 73
+scene_prop_slot_destruct_next_stage_5           = 74
+scene_prop_slot_destruct_next_stage_6           = 75
+scene_prop_slot_destruct_next_stage_7           = 76
+scene_prop_slot_destruct_next_stage_8           = 77
+scene_prop_slot_destruct_next_stage_9           = 78
+scene_prop_slot_destruct_next_stage_10          = 79
+
+scene_prop_slot_parent_prop         = 80
+scene_prop_slot_child_prop1         = 81
+scene_prop_slot_child_prop2         = 82
+scene_prop_slot_child_prop3         = 83
+scene_prop_slot_child_prop4         = 84
+scene_prop_slot_child_prop5         = 85
+scene_prop_slot_child_prop6         = 86
+scene_prop_slot_child_prop7         = 88
+scene_prop_slot_child_prop8         = 89
+scene_prop_slot_child_prop9         = 90
+scene_prop_slot_child_prop10        = 91
+scene_prop_slot_child_prop11        = 92
+scene_prop_slot_child_prop12        = 93
+scene_prop_slot_child_prop13        = 94
+scene_prop_slot_child_prop14        = 95
+scene_prop_slot_child_prop15        = 96
+scene_prop_slot_child_prop16        = 97
 
 scene_prop_slots_begin              = scene_prop_open_or_close_slot
-scene_prop_slots_end                = 67
-scene_prop_slot_acc_z               		= 68
-scene_prop_slot_decision                 = 69
-scene_prop_slot_time2		                = 70
-scene_prop_slot_following		    = 71
+scene_prop_slots_end                = 98
+scene_prop_slots_end                = 99
+scene_prop_slot_acc_z               		= 100
+scene_prop_slot_decision                 = 101
+scene_prop_slot_time2		                = 102
+scene_prop_slot_following		    = 103
 
 scene_prop_slots_defmin_begin       = scene_prop_slot_replaced_by
 
@@ -381,6 +450,20 @@ slot_team1_unit_use_weapon = slot_team2_amount_of_troops + 9
 slot_team2_unit_use_weapon = slot_team1_unit_use_weapon+ 9
 
 
+#Viking Conquest patch 1.167 parameters for try_for_prop_instances
+somt_object = 1
+somt_entry = 2
+somt_item = 3
+somt_baggage = 4
+somt_flora = 5
+somt_passage = 6
+somt_spawned_item = 7
+somt_spawned_single_ammo_item = 8
+somt_spawned_unsheathed_item = 9
+somt_shield = 10
+somt_temporary_object = 11
+
+
 #NORMAL ACHIEVEMENTS
 ACHIEVEMENT_NONE_SHALL_PASS = 1,
 ACHIEVEMENT_MAN_EATER = 2,
@@ -467,6 +550,12 @@ ACHIEVEMENT_IRON_BEAR = 72,
 ACHIEVEMENT_LEGENDARY_RASTAM = 73,
 ACHIEVEMENT_SVAROG_THE_MIGHTY = 74,
 
+ACHIEVEMENT_MAN_HANDLER = 75,
+ACHIEVEMENT_GIRL_POWER = 76,
+ACHIEVEMENT_QUEEN = 77,
+ACHIEVEMENT_EMPRESS = 78,
+ACHIEVEMENT_TALK_OF_THE_TOWN = 79,
+ACHIEVEMENT_LADY_OF_THE_LAKE = 80,
 
 # MM
 multiplayer_player_loops_end      = 250
@@ -478,13 +567,13 @@ multiplayer_game_max_points       = 10001
 
 
 mm_destructible_props_begin  = "spr_mm_house_wall_1"
-mm_destructible_props_end    = "spr_mm_destructible_props_end"
+mm_destructible_props_end    = "spr_mm_house_wall_2dd"
 
 mm_destroyed_props_begin     = "spr_mm_house_wall_2dd"
-mm_destroyed_props_end       = "spr_mm_destroyed_props_end"
+mm_destroyed_props_end       = "spr_mm_wallgate"
 
 mm_cannon_types_begin        = "spr_mm_cannon_12pdr"
-mm_cannon_types_end          = "spr_mm_cannons_end"
+mm_cannon_types_end          = "spr_mm_cannonball_6pd"
 
 mm_cannon_wood_types_begin   = "spr_mm_cannon_12pdr_wood"
 mm_cannon_wood_types_end     = "spr_mm_cannon_12pdr_wheels"
@@ -502,13 +591,13 @@ mm_cannon_button_types_begin   = "spr_mm_limber_button"
 mm_cannon_button_types_end     = "spr_mm_round_button"
 
 mm_button_types_begin       = "spr_mm_cannon_12pdr_limber"
-mm_button_types_end         = "spr_mm_buttons_end"
+mm_button_types_end         = "spr_mm_ship_rudder"
 
 mm_explosive_props_begin       = "spr_crate_explosive_fra"
-mm_explosive_props_end         = "spr_crate_explosive_end"
+mm_explosive_props_end         = "spr_mm_bird"
 
 mm_construct_props_begin       = "spr_mm_stakes_construct"
-mm_construct_props_end         = "spr_mm_construct_props_end"
+mm_construct_props_end         = "spr_mm_crator_small"
 
 mm_construct_props_strings     = "str_mm_stakes_construct"
 
@@ -521,6 +610,34 @@ firearm_type_musket         = 4
 
 firearm_types_begin        = 1
 firearm_types_end          = firearm_type_musket + 1 # + 1 cause loops are -1
+
+
+#royale
+royale_item_class_musket      = 1
+royale_item_class_pistol      = 2
+royale_item_class_carabine    = 3 # rifles and musketoons too
+royale_item_class_smallsword  = 4 # briquet and knives
+royale_item_class_bigsword    = 5 # officer, light and heavy cav
+royale_item_class_bottle      = 6
+royale_item_class_axe         = 7 # big and small axes
+royale_item_class_spear       = 8 # spears and pikes and lances
+royale_item_class_club        = 9 # trunks clubs fighthammers
+royale_item_class_tool        = 10 # spades, spyglass, construction hammer
+royale_item_class_ramrod      = 11 # no box
+royale_item_class_lighter     = 12 # no box
+royale_item_class_ammo        = 13
+royale_item_class_ammo_musket = 14
+royale_item_class_ammo_pistol = 15
+royale_item_class_end         = 16
+
+royale_item_class_horse_light   = 1
+royale_item_class_horse_medium  = 2
+royale_item_class_horse_heavy   = 3
+royale_item_class_horse_arty    = 4
+royale_item_class_horse_end     = 5
+
+
+
 
 
 mod_variable_use_class_limits  = 1
@@ -556,7 +673,28 @@ mod_variable_auto_kick         = 30
 mod_variable_max_teamkills_before_kick = 31
 mod_variable_auto_horse        = 32
 mod_variable_auto_swap         = 33
-mod_variable_beaconed_player   = 34
+mod_variable_no_rambo          = 34
+mod_variable_no_rambo_range    = 35
+mod_variable_limit_surgeon     = 36  #patch1115 59/11
+mod_variable_groupfight_mode   = 37  #patch1115 60/8
+mod_variable_is_admin          = 38  #patch1115
+mod_variable_line_inf_spread   = 39  #patch1115 63/13
+mod_variable_num_custom_maps   = 40  #patch1115 64/9
+mod_variable_admin_white_list  = 41
+mod_variable_competitive_score_mode = 42  #G:comp_score:
+mod_variable_enable_custom_directional_keys = 43
+mod_variable_custom_string_troop_id = 44 #modders_props:custom_strings: Will hold ID of troop which will be renamed on client in next message
+mod_variable_number_of_custom_strings = 45 #modders_props:custom_strings: The number of custom string troops enabled. The more you have, higher the server load on player join
+mod_variable_enable_custom_chat = 46 #custom_chat:
+mod_variable_limit_arty_train   = 47
+mod_variable_request_map_name   = 48
+mod_variable_request_map_name_no_open = 49
+mod_variable_enable_custom_action_v = 50 #custom_keys:
+mod_variable_enable_custom_action_b = 51 #custom_keys:
+mod_variable_auto_ff   = 52
+mod_variable_beaconed_player   = 53
+
+
 
 mod_variables_begin        = mod_variable_use_class_limits
 mod_variables_end          = mod_variable_beaconed_player + 1
@@ -595,9 +733,11 @@ player_list_admin_cheat_heal_player  = 5
 player_list_admin_cheat_ammo_player  = 6
 player_list_admin_autobalance_player = 7
 player_list_admin_beacon_player      = 8
-
+player_list_admin_revive_player      = 9 ##patch1115 46/9
+player_list_admin_god_mode      = 10 ##patch1115 54/7
+player_list_admin_spawn_player      = 11 ##patch1115 46/29
 player_list_commands_begin  = player_list_admin_ban_player_temp
-player_list_commands_end    = 9
+player_list_commands_end    = 12
 
 
 cheat_item_hammer          = 1
@@ -605,9 +745,10 @@ cheat_item_shotgun         = 2
 cheat_item_rocketlauncher  = 3
 cheat_item_grenade         = 4
 cheat_item_horse           = 5
+cheat_item_balllauncher    = 6
 
 cheat_items_begin          = cheat_item_hammer
-cheat_items_end            = 6
+cheat_items_end            = 7
 
 
 cheat_tele_to              = 0
@@ -616,6 +757,8 @@ cheat_tele_wall            = 2
 
 cheat_teles_begin          = cheat_tele_to
 cheat_teles_end            = 3
+
+#cheat_god_mode             = 1  #patch1115 54/3
 # Vincenzo end
 
 #Beaver
@@ -764,10 +907,11 @@ players_list_action_ammo        = 13
 players_list_action_beacon      = 14
 players_list_action_tele_to     = 15
 players_list_action_tele_bring  = 16
-
-
+players_list_action_revive      = 17 #patch1115 46/10
+players_list_action_god      = 18 #patch1115 54/9
+players_list_action_spawn     = 19 #patch1115 46/30
 players_list_actions_begin      = players_list_action_poll_kick
-players_list_actions_end        = 17
+players_list_actions_end        = 20
 
 
 cannon_ammo_type_round      = 1
@@ -791,9 +935,39 @@ player_action_place_rocket  = 4
 player_action_toggle_walk   = 5
 player_action_has_cheat     = 6
 player_action_surrender = 7
+player_action_suicide = 8 #patch1115 58/6
+#custom_keys: start
+player_action_key_up_held = 9
+player_action_key_down_held = 10
+player_action_key_left_held = 11
+player_action_key_right_held = 12
+player_action_key_up_right_held = 13
+player_action_key_up_left_held = 14
+player_action_key_down_right_held = 15
+player_action_key_down_left_held = 16
+player_action_key_v = 17
+player_action_key_b = 18
+#custom_keys: end
+player_action_misc_item_drinking = 19
+player_action_custom_order_menu_interact = 20
 
 player_actions_begin        = player_action_voice
-player_actions_end          = 9
+player_actions_end          = 21
+
+#Note: keys have to be value 1 to 0. They are used in a try_for_range
+custom_order_menu_key_1 = 1
+custom_order_menu_key_2 = 2
+custom_order_menu_key_3 = 3
+custom_order_menu_key_4 = 4
+custom_order_menu_key_5 = 5
+custom_order_menu_key_6 = 6
+custom_order_menu_key_7 = 7
+custom_order_menu_key_8 = 8
+custom_order_menu_key_9 = 9
+custom_order_menu_key_0 = 10
+custom_order_menu_key_end = 11
+custom_order_menu_other_menu_active = 98
+custom_order_menu_close = 99
 
 
 voice_type_cry                = 1
@@ -820,6 +994,9 @@ music_types_end               = music_type_toggle_together + 1
 
 spyglass_type_start           = 1
 spyglass_type_stop            = 2
+
+drinking_type_start       = 1
+drinking_type_stop        = 2
 
 colour_white      = 0
 colour_red        = 1
@@ -890,11 +1067,11 @@ prop_effect_type_stop_all  = 3
 prop_effect_types_begin  = prop_effect_type_sound
 prop_effect_types_end    = 4
 
+prop_effect_handle_stop    = 0
 prop_effect_handle_start   = 1
-prop_effect_handle_stop    = 2
 
-prop_effect_handles_begin  = prop_effect_handle_start
-prop_effect_handles_end    = 3
+prop_effect_handles_begin  = prop_effect_handle_stop
+prop_effect_handles_end    = 2
 
 admin_chat_type_everyone   = 1
 admin_chat_type_inter      = 2
@@ -902,10 +1079,27 @@ admin_chat_type_inter      = 2
 admin_chat_types_begin  = admin_chat_type_everyone
 admin_chat_types_end    = 3
 
+admin_chat_type_custom_poll = 4
+
 debug_mode = 1
 
-cannon_hit_effect_event_type_explosion = 1
-cannon_hit_effect_event_type_ground = 2
+cannon_hit_effect_event_type_explosion  = 1
+cannon_hit_effect_event_type_ground     = 2
+cannon_hit_effect_event_type_water_ball = 3
+cannon_hit_effect_event_type_wall       = 4
 
 cannon_hit_effect_event_types_begin = cannon_hit_effect_event_type_explosion
-cannon_hit_effect_event_types_end = 3
+cannon_hit_effect_event_types_end = 5
+
+
+# constants for random number generator.
+
+randomer_const_m1      = 2147483647
+randomer_const_m2      = 2147483399
+randomer_const_a1      = 40015
+randomer_const_a2      = 40692
+randomer_const_q1      = 53667  # (store_div,":Q1",":M1",":A1"),
+randomer_const_q2      = 52774  # (store_div,":Q2",":M2",":A2"),
+randomer_const_r1      = 38657  # (store_mod,":R1",":M1",":A1"),
+randomer_const_r2      = 3791   # (store_mod,":R2",":M2",":A2"),
+randomer_const_m1_sub1 = 2147483646
