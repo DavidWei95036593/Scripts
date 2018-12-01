@@ -45,7 +45,7 @@ strings = [
   ("kingdom_3_adjective",                     "Koenigreich Preussen"),
   ("kingdom_4_adjective",                     "Rossiyskaya Imperiya"),
   ("kingdom_5_adjective",                     "Osterreich"),
-  ("kingdom_6_adjective",                     "Rhenish"),
+  ("kingdom_6_adjective",                     "Sarranid"),
 
 
   ("credits_1", "Mount&Blade Warband: Napoleonic Wars Copyright 2008-2012 Taleworlds Entertainment"),
@@ -111,7 +111,7 @@ Wolfgang Amadeus Mozart - Great mass in C minor - Gloria.^\
 Richard Wagner - Ritt der Valkuren.^\
 Antonin Dvorak - New world symphony (4th movement)^\
 Ludwig von Beethoven - Symphony No. 5 (1st movement)^\
-Georges Bizet - Toreadorï¿½s Song (from Carmen)^^\
+Georges Bizet - Toreador’s Song (from Carmen)^^\
 Neosounds.com^\
 Ludwig von Beethoven: Symphony no.9 - 4th Movement; By the New Age Symphony Orchestra^^\
 sounddogs.com^\
@@ -172,27 +172,6 @@ Schmetterling^\
 Tiny Fugue^\
 Lift Motif^\
 ^^\
-Patch 1.2 Community Contributors:^\
-Thunderstormer: Programming^\
-Joe 'Marks' Markoutsis: Modeling and texturing^\
-Paul 'Maximilien' Le Guilly: Modeling, texturing, French translation^\
-Martins 'Caesim' Stikuts: Programming^\
-Milos 'Grozni' Stojanovic: Programming^\
-Joshua Hurrell: Mapping^\
-Zebaad Peritz: Mapping^\
-Ondrej 'Raii' Fischer : Czech translation^\
-Jesus Varela Grela and AlfonsoM: Spanish translation^\
-Chengda 'FeX_Xcd' Xu: Chinese translation^\
-Lingyun Zeng & ilam: Chinese translation^\
-Nedim: Turkish translation^\
-Filip 'Vitko' Witkowski: Polish translation^\
-Stasiu 'Stasiulek' Szeliga: Polish translation^\
-Mikolaj 'Zahari' Slawinski: Polish translation^\
-Bomulsun, Ronald Speirs, ChickenDelivering, Karon: Korean translation^\
-'Zauberfisch': Programming^\
-'Silen': Modeling, texturing and animating^\
-Niklas 'Jetfire' Kachel: Modeling, texturing and animating^\
-^^\
 Contributions:^\
 Mika'il Yazbeck - Associate Producer^\
 Volodymyr 'Yamabushi' Hamardiuk^\
@@ -203,7 +182,7 @@ Mark 'Spunned' Echers^\
 David 'Fahausi/Kabs' Kappelhoff^\
 Ralf 'Fortune' van Daal^\
 Christian 'Condoz' Gruber^\
-Aitor 'Leberecht' Jimï¿½nez^\
+Aitor 'Leberecht' Jiménez^\
 Simon 'Finguin' B.C^\
 Lucas 'Nexus' Andrieu^\
 Valentin 'Vavas' Provost^\
@@ -259,7 +238,7 @@ EVP Sales:^Reena M Miranda^^\
 EVP Publishing:^Susana Meza^^\
 Executive Producer:^Mattias Lilja^^\
 Senior Producer:^Gordon Van Dyke^^\
-Producers:^Shams Jorjani^Jorgen Bjï¿½rklund^Staffan Berglen^^\
+Producers:^Shams Jorjani^Jorgen Björklund^Staffan Berglen^^\
 DLC Producer:^Jacob Munthe^^\
 QA Producer:^Erika S. Kling^^\
 "),
@@ -272,7 +251,7 @@ Marketing assets:^Veronica Gunlycke^2Coats Creations^^\
 Localization:^S&H Entertainment^^\
 Packaging & Manual layout:^Retrographics^^\
 Packshots:^Martin Doersam^^\
-Thanks to all our partnersï¿½ worldwide, in particular long-term partners^\
+Thanks to all our partners’ worldwide, in particular long-term partners^\
 and last, but not least, a special thanks to all forum members,^\
 operation partners and supporters, who are integral for our success.\
 "),
@@ -309,7 +288,7 @@ operation partners and supporters, who are integral for our success.\
   ("mp_columbia_hill_farm", "Columbia Farm (Day)"),
   ("mp_columbia_farm_morning", "Columbia Farm (Morning)"),
   ("mp_countryside", "Countryside (Day)"),
-  ("mp_countryside_fog", "Countryside (Fog)"),  #patch1115
+  ("mp_countryside", "Countryside (Fog)"),
   ("mp_dust", "Dust (Day)"),
   ("mp_dust_morning", "Dust (Morning)"),
   ("mp_european_city_summer", "European City (Summer)"),
@@ -366,7 +345,6 @@ operation partners and supporters, who are integral for our success.\
   ("mp_oaksfield_storm", "Oaksfield (Storm)"),
   ("mp_outlaws_den", "Outlaw's Den (Day)"),
   ("mp_outlaws_den_night", "Outlaw's Den (Night)"),
-  ("mp_pyramids", "Battle of the Pyramids (Day)"),
   ("mp_quatre_bras", "Quatre Bras (Day)"),
   ("mp_quatre_bras_night", "Quatre Bras (Night)"),
   ("mp_river_crossing", "River Crossing (Day)"),
@@ -395,14 +373,13 @@ operation partners and supporters, who are integral for our success.\
   ("mp_spanish_mountain_pass_evening", "Spanish Mountain Pass (Evening)"),
   ("mp_spanish_village", "Spanish Village (Day)"),
   ("mp_spanish_village_evening", "Spanish Village (Evening)"),
-  ("mp_strangefields", "Strangefields"),
+  ("mp_strangefields", "Strangefields (Fog)"),
   ("mp_strangefields_storm", "Strangefields (Storm)"),
   ("mp_swamp", "Siegburger Swamp (Fog)"),
   ("mp_venice", "Venice (Day)"),
   ("mp_venice_morning", "Venice (Morning)"),
   ("mp_walloon_farm", "Wallonian Farm (Day)"),
   ("mp_walloon_farm_night", "Wallonian Farm (Night)"),
-  ("mp_wissaudorf", "Wissaudorf (Day)"),
   ("mp_testing_map", "Testing map"),
 
   #Random
@@ -455,86 +432,6 @@ operation partners and supporters, who are integral for our success.\
   ("mp_custom_map_18", "custom_map_18"),
   ("mp_custom_map_19", "custom_map_19"),
   ("mp_custom_map_20", "custom_map_20"),
-  ("mp_custom_map_21", "custom_map_21"),
-  ("mp_custom_map_22", "custom_map_22"),
-  ("mp_custom_map_23", "custom_map_23"),
-  ("mp_custom_map_24", "custom_map_24"),
-  ("mp_custom_map_25", "custom_map_25"),
-  ("mp_custom_map_26", "custom_map_26"),
-  ("mp_custom_map_27", "custom_map_27"),
-  ("mp_custom_map_28", "custom_map_28"),
-  ("mp_custom_map_29", "custom_map_29"),
-  ("mp_custom_map_30", "custom_map_30"),
-  ("mp_custom_map_31", "custom_map_31"),
-  ("mp_custom_map_32", "custom_map_32"),
-  ("mp_custom_map_33", "custom_map_33"),
-  ("mp_custom_map_34", "custom_map_34"),
-  ("mp_custom_map_35", "custom_map_35"),
-  ("mp_custom_map_36", "custom_map_36"),
-  ("mp_custom_map_37", "custom_map_37"),
-  ("mp_custom_map_38", "custom_map_38"),
-  ("mp_custom_map_39", "custom_map_39"),
-  ("mp_custom_map_40", "custom_map_40"),
-  ("mp_custom_map_41", "custom_map_41"),
-  ("mp_custom_map_42", "custom_map_42"),
-  ("mp_custom_map_43", "custom_map_43"),
-  ("mp_custom_map_44", "custom_map_44"),
-  ("mp_custom_map_45", "custom_map_45"),
-  ("mp_custom_map_46", "custom_map_46"),
-  ("mp_custom_map_47", "custom_map_47"),
-  ("mp_custom_map_48", "custom_map_48"),
-  ("mp_custom_map_49", "custom_map_49"),
-  ("mp_custom_map_50", "custom_map_50"),
-  ("mp_custom_map_51", "custom_map_51"),
-  ("mp_custom_map_52", "custom_map_52"),
-  ("mp_custom_map_53", "custom_map_53"),
-  ("mp_custom_map_54", "custom_map_54"),
-  ("mp_custom_map_55", "custom_map_55"),
-  ("mp_custom_map_56", "custom_map_56"),
-  ("mp_custom_map_57", "custom_map_57"),
-  ("mp_custom_map_58", "custom_map_58"),
-  ("mp_custom_map_59", "custom_map_59"),
-  ("mp_custom_map_60", "custom_map_60"),
-  ("mp_custom_map_61", "custom_map_61"),
-  ("mp_custom_map_62", "custom_map_62"),
-  ("mp_custom_map_63", "custom_map_63"),
-  ("mp_custom_map_64", "custom_map_64"),
-  ("mp_custom_map_65", "custom_map_65"),
-  ("mp_custom_map_66", "custom_map_66"),
-  ("mp_custom_map_67", "custom_map_67"),
-  ("mp_custom_map_68", "custom_map_68"),
-  ("mp_custom_map_69", "custom_map_69"),
-  ("mp_custom_map_70", "custom_map_70"),
-  ("mp_custom_map_71", "custom_map_71"),
-  ("mp_custom_map_72", "custom_map_72"),
-  ("mp_custom_map_73", "custom_map_73"),
-  ("mp_custom_map_74", "custom_map_74"),
-  ("mp_custom_map_75", "custom_map_75"),
-  ("mp_custom_map_76", "custom_map_76"),
-  ("mp_custom_map_77", "custom_map_77"),
-  ("mp_custom_map_78", "custom_map_78"),
-  ("mp_custom_map_79", "custom_map_79"),
-  ("mp_custom_map_80", "custom_map_80"),
-  ("mp_custom_map_81", "custom_map_81"),
-  ("mp_custom_map_82", "custom_map_82"),
-  ("mp_custom_map_83", "custom_map_83"),
-  ("mp_custom_map_84", "custom_map_84"),
-  ("mp_custom_map_85", "custom_map_85"),
-  ("mp_custom_map_86", "custom_map_86"),
-  ("mp_custom_map_87", "custom_map_87"),
-  ("mp_custom_map_88", "custom_map_88"),
-  ("mp_custom_map_89", "custom_map_89"),
-  ("mp_custom_map_90", "custom_map_90"),
-  ("mp_custom_map_91", "custom_map_91"),
-  ("mp_custom_map_92", "custom_map_92"),
-  ("mp_custom_map_93", "custom_map_93"),
-  ("mp_custom_map_94", "custom_map_94"),
-  ("mp_custom_map_95", "custom_map_95"),
-  ("mp_custom_map_96", "custom_map_96"),
-  ("mp_custom_map_97", "custom_map_97"),
-  ("mp_custom_map_98", "custom_map_98"),
-  ("mp_custom_map_99", "custom_map_99"),
-  ("mp_custom_map_100", "custom_map_100"),
 
   ("multi_scene_end", "multi_scene_end"),
 
@@ -548,25 +445,22 @@ operation partners and supporters, who are integral for our success.\
   ("multi_game_type_7", "Siege"),
   ("multi_game_type_8", "Duel"),
   ("multi_game_type_9", "Commander Battle"),
-  ("multi_game_type_10", "King of the Hill"),
 
-  ("multi_game_type_12", "Scene Editing"),
+  ("multi_game_type_11", "Scene Editing"),
   ("multi_game_types_end", "multi_game_types_end"),
-  ("multi_game_type_11", "Battle Royale"),
+  ("multi_game_type_10", "King of the Hill"),
 
   ("poll_kick_player_s1_by_s0", "{s0} started a poll to kick player {s1}."),
   ("poll_ban_player_s1_by_s0", "{s0} started a poll to ban player {s1}."),
   ("poll_change_map_to_s1_by_s0", "{s0} started a poll to change map to {s1}."),
   ("poll_change_map_to_s1_and_factions_to_s2_and_s3_by_s0", "{s0} started a poll to change map to {s1} and nations to {s2} and {s3}."),
   ("poll_change_number_of_bots_to_reg0_and_reg1_by_s0", "{s0} started a poll to change bot counts to {reg0} and {reg1}."),
-  ("poll_custom_s1_by_s0", '{s0} started a poll "{s1}".'),
 
   ("poll_kick_player", "Poll to kick player {s0}: 1 = Accept, 2 = Decline"),
   ("poll_ban_player", "Poll to ban player {s0}: 1 = Accept, 2 = Decline"),
   ("poll_change_map", "Poll to change map to {s0}: 1 = Accept, 2 = Decline"),
   ("poll_change_map_with_faction", "Poll to change map to {s0} and nations to {s1} versus {s2}: 1 = Accept, 2 = Decline"),
   ("poll_change_number_of_bots", "Poll to change number of bots to {reg0} for {s0} and {reg1} for {s1}: 1 = Accept, 2 = Decline"),
-  ("poll_custom_poll", "{s0}: 1 = Accept, 2 = Decline"),
   ("poll_time_left", "({reg0} seconds left)"),
   ("poll_result_yes", "The poll is accepted by the majority."),
   ("poll_result_no", "The poll is rejected by the majority."),
@@ -645,12 +539,8 @@ operation partners and supporters, who are integral for our success.\
   ("s1_captured_flag_reg0", "{s1} has captured {s0}!"),
   ("s1_pulling_flag_reg0", "{s1} has started capturing {s0}."),
 
-  # ("s1_defended_castle", "{s1} defended their fort!"),
-  # ("s1_captured_castle", "{s1} captured the fort!"),
-  #hi I am
-  ("s1_defended_castle", "The humans have survived!"),
-  ("s1_captured_castle", "Zombies killed all the humans!"),
-
+  ("s1_defended_castle", "{s1} defended their fort!"),
+  ("s1_captured_castle", "{s1} captured the fort!"),
 
   ("auto_team_balance_in_20_seconds", "Auto-balance will be done in 30 seconds."),
   ("auto_team_balance_next_round", "Auto-balance will be done next round."),
@@ -715,14 +605,13 @@ operation partners and supporters, who are integral for our success.\
   ("poll_for_changing_number_of_bots", "Change number of bots in teams"),
   ("poll_for_kicking_a_player", "Kick a player"),
   ("poll_for_banning_a_player", "Ban a player"),
-  ("poll_for_custom_poll", "Custom poll"),
   ("choose_a_player", "Choose a player:"),
   ("choose_a_map", "Choose a map:"),
   ("choose_a_faction_for_team_reg0", "Choose a nation for team {reg0}:"),
   ("choose_number_of_bots_for_team_reg0", "Choose number of bots for team {reg0}:"),
   ("spectator", "Spectator"),
   ("spectators", "Spectators"),# ( {reg43} )"),
-  ("score_2", "Score"),  #patch1115
+  ("score", "Score"),
   ("command", "Command:"),
   ("profile_banner_selection_text", "Choose a banner for your profile:"),
   ("use_default_banner", "Use Nation's Banner"),
@@ -766,7 +655,7 @@ operation partners and supporters, who are integral for our success.\
   ("team_points_limit_is_reg0", "Team point limit is {reg0}."),
   ("defender_spawn_count_limit_is_s1", "Defender spawn count is {s1}."),
   ("system_error", "SYSTEM ERROR!"),
-  ("routed_2", "routed"), #patch1115
+  ("routed", "routed"),
   ("s42", "{s42}"),
   ("s14", "{!}{s14}"),
 
@@ -800,11 +689,11 @@ operation partners and supporters, who are integral for our success.\
   ("s2_s3", "{!}{s2}^{s3}"),
   ("s1_s2", "{!}{s1} {s2}"),
 
-  ("s15_2", "{!}{s15}"),  #patch1115
+  ("s15", "{!}{s15}"),
   ("s13", "{!}{s13}"),
 
   ("s12", "{!}{s12},"),
-  ("s12_2", "{!}{s12}."),    #patch1115
+  ("s12", "{!}{s12}."),
 
   ("you", "you"),
   ("we", "we"),
@@ -856,7 +745,6 @@ operation partners and supporters, who are integral for our success.\
   ("true", "True"),
   ("false", "False"),
   ("teamkilled_s1_s2","{s1} teamkilled {s2}."),
-	("teamkilled_s1_a_bot","{s1} teamkilled a friendly bot."),
   ("kick_server_kills_first_s1_reg5", "{s1} is auto kicked for having {reg5} teamkills, first time."),
   ("kick_server_kills_second_s1_reg5", "{s1} is auto kicked for having {reg5} teamkills, second time."),
   ("ban_server_kills_s1_reg5", "{s1} is auto banned for having {reg5} or more teamkills."),
@@ -915,7 +803,7 @@ operation partners and supporters, who are integral for our success.\
 
   ("cannon_is_already_in_use", "This cannon is already being used."),
 
-  ("already_to_many_players_class_s21", "There are already too many players playing as {s21}. Choose another unit."), # changing this or wanting to use a different line requires a client side change
+  ("already_to_many_players_class_s21", "There are already too many players playing as {s21}. Choose another unit."),
   ("already_to_many_players_rank_mus", "There are already too many players playing as Musician in this unit. Choose another rank."),
   ("already_to_many_players_rank_srg", "There are already too many players playing as {s21} in this unit. Choose another rank."),
   ("already_to_many_players_rank_off", "There are already too many players playing as {s21} in this unit. Choose another rank."),
@@ -932,9 +820,7 @@ operation partners and supporters, who are integral for our success.\
   ("limit_heavycav", "Max Unarmoured Heavy Cav of Horsemen count (%):"),
   ("limit_artillery", "Limit of Artillery in each team (%):"),
   ("limit_rocket", "Limit of Rocketeers in each team (%):"),
-  ("limit_sapper", "Limit of Engineers in each team (%):"),#hotfix
-  ("limit_sapper_1", "Limit of Sailors and Partizani per team (%):"),
-  ("limit_sapper_2", "Limit Sappers, Sailors, Opol, and Parti per team (%):"),#end
+  ("limit_sapper", "Limit of Engineers in each team (%):"),
   ("limit_musician", "Limit of Musicians in each unit (nr):"),
   ("limit_sergeant", "Limit of Sergeants in each unit (nr):"),
   ("limit_officer", "Limit of Captains in each unit (nr):"),
@@ -946,7 +832,7 @@ operation partners and supporters, who are integral for our success.\
   ("bonus_strength", "Bonus Strength (%):"),
   ("bonus_range", "Bonus Range in meters:"),
   ("num_bots_per_squad", "Num bots per squad:"),
-  ("scale_squad_size", "Scale squad size to balance teams"),
+  ("scale_squad_size", "Scale squad size after team ratio"),
   ("max_num_bots", "Max number of bots:"),
   ("chance_of_falling_off_horse", "Chance of falling off horse when hit (%):"),
   ("damage_from_horse_dying", "Damage dealt to rider when horse dies (%):"),
@@ -1004,8 +890,6 @@ operation partners and supporters, who are integral for our success.\
   ("admin_set_limit_artillery_s0_reg1", "{s0} Set the class limit for Artillery to {reg1} % of the team."),
   ("admin_set_limit_rocket_s0_reg1", "{s0} Set the class limit for Rocketeers to {reg1} % of the team."),
   ("admin_set_limit_sapper_s0_reg1", "{s0} Set the class limit for Sappers to {reg1} % of the team."),
-  ("admin_set_limit_sapper_s0_reg1_1", "{s0} Set the class limit for Partizani and Sailors to {reg1} % of the team."),#hotfix
-  ("admin_set_limit_sapper_s0_reg1_2", "{s0} Set the class limit for Sappers, Partizani, Sailors, and Opolcheniye to {reg1} % of the team."),#end
   ("admin_set_limit_musician_s0_reg1", "{s0} Set the limit for the Musician rank to {reg1} persons per Unit."),
   ("admin_set_limit_sergeant_s0_reg1", "{s0} Set the limit for the Sergeant rank to {reg1} persons per Unit."),
   ("admin_set_limit_officer_s0_reg1", "{s0} Set the limit for the Officer rank to {reg1} persons per Unit."),
@@ -1055,8 +939,6 @@ operation partners and supporters, who are integral for our success.\
   ("cheat_spawn_shotgun_s2", "{s2} Spawned a Shotgun."),
   ("cheat_spawn_rocketlauncher", "Spawn Rocket Launcher"),
   ("cheat_spawn_rocketlauncher_s2", "{s2} Spawned a Rocket Launcher."),
-  ("cheat_spawn_balllauncher", "Spawn Cannonball Launcher"),
-  ("cheat_spawn_balllauncher_s2", "{s2} Spawned a Cannonball Launcher."),
   ("cheat_spawn_grenade", "Spawn Hand Grenade"),
   ("cheat_spawn_grenade_s2", "{s2} Spawned a Hand Grenade."),
   ("cheat_spawn_grenade_2_s2", "And Saint {s2} raised the holy grenade up on high, saying, 'O Lord, bless this thy hand grenade, that with it thou mayst blow thine enemies to tiny bits, in thy mercy.' And the Lord did grin."),
@@ -1080,7 +962,6 @@ operation partners and supporters, who are integral for our success.\
   ("cheat_tele_wall_s2", "{s2} Teleported."),
   ("admin_chat", "Admin Chat"),
   ("admin_chat_intern", "Internal Admin Chat"),
-  ("admin_chat_custom_poll", "Custom Poll"),
   ("admin_chat_s1_s0", "*Admin*[{s1}]: {s0}"),
   ("inter_admin_chat_s1_s0", "[{s1}]: {s0}"),
   ("chk_auto_kick", "Enable auto-kick/ban"),
@@ -1104,7 +985,6 @@ operation partners and supporters, who are integral for our success.\
   ("prussia_name", "Kingdom of Prussia"),
   ("russia_name", "Russian Empire"),
   ("austria_name", "Austrian Empire"),
-  ("rhine_name", "Confederation of the Rhine"),
 
   #Unit Selection
   ("infantry", "Infantry"),
@@ -1179,13 +1059,10 @@ operation partners and supporters, who are integral for our success.\
   ("invalid_flag_selection","Select a flag controlled by your team."),
   ("invalid_prop_select","Not enough build points!"),
   ("invalid_prop_place","You can't place this prop here!"),
-  ("invalid_prop_place_2","You have to wait half a second between making props!"),
-  ("invalid_prop_place_3","You can't place this prop here and you have to wait half a second between making props!"),
 
-  #("sail_brit","Sailor, HMS Neptune"),
-  #("sail_fren","Sailor, Intrepide"),
-  ("sail_brit","Marine, 1st Battalion - Royal Marines"),#hotfix
-  ("sail_fren","Marine, 24e Bataillon des Equipages"),
+  ("sail_brit","Sailor, HMS Neptune"),
+  ("sail_fren","Sailor, Intrepide"),
+
   #Music Tracks
   ("select_track","Select track:"),
   ("music_calls","Command Calls:"),
@@ -1417,7 +1294,7 @@ operation partners and supporters, who are integral for our success.\
   ("mp_roxburgh_flag_2","Riverside Village"),
   ("mp_roxburgh_flag_3","Lakeside Villa"),
   ("mp_roxburgh_flag_4","Makers Village"),
-  ("mp_roxburgh_flag_5","Middletonï¿½s Town"),
+  ("mp_roxburgh_flag_5","Middleton’s Town"),
   ("mp_roxburgh_flag_6","Shrine"),
   ("mp_roxburgh_flag_7","Lumberjack's Lodge"),
 
@@ -1461,47 +1338,6 @@ operation partners and supporters, who are integral for our success.\
   ("mp_walloon_farm_flag_5","West Hill"),
   ("mp_walloon_farm_flag_6","Redoubt"),
 
-  ("mp_pyramids_flag_1","Main Spawn"),
-  ("mp_pyramids_flag_2","Main Spawn"),
-  ("mp_pyramids_flag_3","Quarry"),
-  ("mp_pyramids_flag_4","Great Pyramid"),
-  ("mp_pyramids_flag_5","Temple"),
-  ("mp_pyramids_flag_6","Fields"),
-  ("mp_pyramids_flag_7","Island"),
-  ("mp_pyramids_flag_8","Outpost"),
-  ("mp_pyramids_flag_9","Village"),
-
-  ("mp_wissaudorf_flag_1","Main Spawn"),
-  ("mp_wissaudorf_flag_2","Main Spawn"),
-  ("mp_wissaudorf_flag_3","Forest Lodge"),
-  ("mp_wissaudorf_flag_4","Fort"),
-  ("mp_wissaudorf_flag_5","Woodland Camp"),
-  ("mp_wissaudorf_flag_6","Ruins"),
-  ("mp_wissaudorf_flag_7","Swamp"),
-  ("mp_wissaudorf_flag_8","Outpost"),
-  ("mp_wissaudorf_flag_9","Village"),
-
- ("survivors_won_1", "The humans survived!"),
-  ("survivors_won_2", "The zombie threat has been eliminated"),
-  ("zombies_won_1", "The humans are all dead!"),
-  ("zombies_won_2", "The zombies killed everyone"),
-
-  ("s1_welcome", "{s1}, welcome to the THE SERVER NAME HERE"),
-
-  ("recruiting", "Big purple message"),
-
-  ("zombie_partizan", "You must select the partizan troop."),
-  ("only_one_alpha", "There can be only one alpha zombie."),
-
-  ("infection", "You have been infected!"),
-
-  ("notice1", "Select the line militia class to be an Alpha Zombies. It is a lot more powerful, but there can be only one."),
-  ("notice2", "Respect other players. No racism, discrimination and other rudeness will be tolerated."),
-  ("notice3", "As a zombie, try flanking the survivors to surprise them!"),
-  ("notice4", "Bottles sometimes explode when thrown, knocking down and hurting survivors in a small radius."),
-  ("notice5", "Survivors reload faster the more kills they get."),
-  ("notice6", "Being unreachable will get you banned."),
-  ("notice7", "Work together as survivors and watch each others back."),
 
 
   # Scene making help
@@ -1725,151 +1561,4 @@ They will retreat no further, but will defend their Moscow to the dying breath."
 
 ("mission_briefings_end","mission_briefings_end"),
 
-#patch1115
-
-("map_changed", "Map change."), #patch1115 fix 3/10
-("round_changed", "New round started."), #patch1115 fix 4/5
-("teamkilled_s1_s2_horse","{s1} teamkilled {s2}'s horse."), #patch1115 fix 41/2
-("teamwounded_s1_s2","{s1} teamhit {s2} {reg60} health."), #patch1115 fix 41/3
-("teamwounded_s1_s2_horse","{s1} teamhit {s2}'s horse {reg60} health."), #patch1115 fix 41/4
-("revive_player", "Revive Player"),
-("revive_all", "Revive All"),
-("revive_player_s2_s3", "{s2} Revived Player {s3}."),
-("revive_all_s2", "{s2} Revived Everyone."),
-("cheat_god_mode", "God Mode"),
-("cheat_god_mode_s3_s2", "{s2} turned on God Mode for {s3}."),
-("cheat_god_mode_s3_s2_2", "{s2} turned off God Mode for {s3}."),
-("suicide_player", "Suicide"),#patch1115 58/4
-("s2_suicide", "{s2} has committed suicide."),#patch1115 58/5
-("admin_set_limit_surgeon_s0_reg1", "{s0} Set the class limit for Surgeons to {reg1} % of the team."),#patch1115 59/1
-("limit_surgeon", "Limit of Surgeons in each team (%):"),#patch1115 59/14
-("admin_set_limit_arty_train_s0_reg1", "{s0} Set the class limit for Artillery Trains to {reg1} % of the team."),
-("limit_arty_train", "Limit of Artillery Trains in each team (%):"),
-("admin_set_groupfight_mode_s0_s9", "{s0} Set use Groupfight mode to {s9}."), #patch1115 60/3
-("groupfight_mode", "Disable ranged weapons (groupfighting)"),#patch1115 60/11
-("admin_set_competitive_score_mode_s0_s9", "{s0} Set the Competitive Score mode to {s9}."), #G:comp_score:presentation
-("competitive_score_mode", "Competitive score mode"), #G:comp_score:presentation
-("more_admin_tools", "More Admin Tools"),#patch1115 61/1
-("choose_an_admin_tool", "Choose an admin tool:"),#patch1115 61/12
-("spawn_player", "Spawn Player"),#patch1115 46/21
-("spawn_all", "Spawn All"),
-("spawn_all_s2", "{s2} spawned Everyone."),
-("spawn_player_s2_s3", "{s2} spawned Player {s3}."), #patch1115 46/21 end
-("welcome_message_toggle", "Welcome message is set to {s9}."),#patch1115 fix 10/4
-("commit_suicide", "Are you sure you want to die?"),
-("no_line_inf_spread","Disable players from loose formations with line infantry."),#patch1115 63/3
-("admin_set_no_line_inf_spread_s0_s9", "{s0} Set Disable players from loose formations with line infantry to {s9}."),#patch1115 63/10
-("line_inf_spread",  "The current server settings do not allow for line infantry regiments to spread out past their starting spacing."),#patch1115 63/14
-("num_custom_maps", "Choose the # of available custom maps."),#patch1115 64/4
-("admin_set_num_custom_maps_s0_reg1", "{s0} Set the number of available custom maps to choose from to {reg1}."),#patch1115 64/7
-("auto_turn_on_FF", "When to turn Friendly fire on in seconds."),
-("no_rambo","Disable player damage away from squad."),
-("no_rambo_warning","You are too far from your squad! You deal no damage."),
-("admin_set_no_rambo_s0_s9", "{s0} Set disable player damage away from squad to {s9}."),
-("no_rambo_range", "Maximal distance from squad in meters (rambo):"),
-("admin_set_no_rambo_range_s0_reg1", "{s0} Set the maximal distance from squad to {reg1} meters (no rambo basically)."),
-("admin_set_auto_FF", "{s0} set the time for friendly fire to automatically turn on to {reg1} second(s).  Friendly fire will automatically turn off at rounds end, map resets, and map changes."),
-("admin_set_auto_FF_2", "{s0} turned off friendly fire automatically turning off and on."),
-("FF_turn_on_when", "Friendly fire will turn back on after {reg60} second(s) have past in the round."),
-("FF_turn_on_when_2", "Friendly fire will turn back on after {reg60} second(s) have past in the next round."),
-("FF_turn_on", "Friendly fire is now on, be careful!"),
-# admin white list.
-("set_admin_true_s2", "{s2} is made admin by the whitelist."),
-("set_admin_false_s2", "{s2}'s admin taken away, not on whitelist."),
-("return_set_admin_true_s2", "{s2}, You are made admin by the admin whitelist."),
-("return_set_admin_false_s2", "{s2}, Your admin has been taken away by the admin whitelist."),
-("admin_white_list_is_enabled", "Admin whitelist is enabled."),
-("admin_white_list_is_disabled", "Admin whitelist is disabled."),
-("admin_white_list_added_key_reg0", "Added key: {reg0} to the admin whitelist."),
-
-("map_menu", "  "),
-("choose_maps", "Map selection"),
-#medic shit.
-("healed_player_s2_reg4_reg5", "Healed player {s2} for {reg4}%, current health: {reg5}%."),
-("healed_player_full_s2_reg4", "Healed player {s2} for {reg4}%, and is now fully healed."),
-("healed_player_no_more_s2_reg4", "Healed player {s2} for {reg4}%, and cannot be healed further."),
-("not_healed_player_full_s2", "Player {s2} is already fully healed."),
-("not_healed_player_no_more_s2", "Player {s2} cannot be healed further."),
-("got_healed_player_s2_reg4_reg5", "Player {s2} healed you for {reg4}%, current health: {reg5}%."),
-("got_healed_player_full_s2_reg4", "Player {s2} healed you for {reg4}%, you are now fully healed."),
-("got_healed_player_no_more_s2_reg4", "Player {s2} healed you for {reg4}%, you cannot be healed further."),
-("not_got_healed_player_full_s2", "Player {s2} cannot heal you, You are already fully healed."),
-("not_got_healed_player_no_more_s2", "Player {s2} cannot heal you, you cannot be healed further."),
-("healed_player_horse_s2_reg4_reg5", "Healed player {s2}'s horse for {reg4}%, current health: {reg5}%."),
-("healed_player_horse_full_s2_reg4", "Healed player {s2}'s horse for {reg4}%, and he is now fully healed."),
-("healed_player_horse_no_more_s2_reg4", "Healed player {s2}'s horse for {reg4}%, and he cannot be healed further."),
-("not_healed_player_horse_full_s2", "Player {s2}'s horse is already fully healed."),
-("not_healed_player_horse_no_more_s2", "Player {s2}'s horse cannot be healed further."),
-("got_healed_player_horse_s2_reg4_reg5", "Player {s2} healed your horse for {reg4}%, current health: {reg5}%."),
-("got_healed_player_horse_full_s2_reg4", "Player {s2} healed your horse for {reg4}%, and he is fully healed."),
-("got_healed_player_horse_no_more_s2_reg4", "Player {s2} healed your horse for {reg4}%, and he cannot be healed further."),
-("not_got_healed_player_horse_full_s2", "Player {s2} cannot heal your horse, he is already fully healed."),
-("not_got_healed_player_horse_no_more_s2", "Player {s2} cannot heal your horse, he cannot be healed further."),
-("healed_horse_s2_reg4_reg5", "Healed {s2} horse for {reg4}%, current health: {reg5}%."),
-("healed_horse_full_s2_reg4", "Healed {s2} horse for {reg4}%, and he is now fully healed."),
-("healed_horse_no_more_s2_reg4", "Healed {s2} horse for {reg4}%, and he cannot be healed further."),
-("not_healed_horse_full_s2", "Player {s2} horse is already fully healed."),
-("not_healed_horse_no_more_s2", "Player {s2} horse cannot be healed further."),
-
-
-#royale
-("royale_weapon_musket", "Pick up a musket"),
-("royale_weapon_pistol", "Pick up a pistol"),
-("royale_weapon_carabine", "Pick up a carabine"),
-("royale_weapon_smallsword", "Pick up a small sword"),
-("royale_weapon_bigsword", "Pick up a sword"),
-("royale_weapon_bottle", "Pick up a bottle"),
-("royale_weapon_axe", "Pick up a axe"),
-("royale_weapon_spear", "Pick up a polearm"),
-("royale_weapon_club", "Pick up a club"),
-("royale_weapon_tool", "Pick up a tool"),
-("royale_weapon_ramrod", "Pick up a ramrod"),
-("royale_weapon_lighter", "Pick up a lighter"),
-("royale_weapon_ammo", "Grab some ammo"),
-("royale_weapon_ammo_musket", "Grab some musket ammo"),#hotfix
-("royale_weapon_ammo_pistol", "Grab some pistol ammo"),
-
-("custom_flag_name_1", "Custom Flag 1"),
-("custom_flag_name_2", "Custom Flag 2"),
-("custom_flag_name_3", "Custom Flag 3"),
-("custom_flag_name_4", "Custom Flag 4"),
-("custom_flag_name_5", "Custom Flag 5"),
-("custom_flag_name_6", "Custom Flag 6"),
-("custom_flag_name_7", "Custom Flag 7"),
-("custom_flag_name_8", "Custom Flag 8"),
-("custom_flag_name_9", "Custom Flag 9"),
-("custom_flag_name_10", "Custom Flag 10"),
-("custom_flag_name_11", "Custom Flag 11"),
-("custom_flag_name_12", "Custom Flag 12"),
-("custom_flag_name_13", "Custom Flag 13"),
-("custom_flag_name_14", "Custom Flag 14"),
-("custom_flag_name_15", "Custom Flag 15"),
-("custom_flag_name_16", "Custom Flag 16"),
-("custom_flag_name_17", "Custom Flag 17"),
-("custom_flag_name_18", "Custom Flag 18"),
-("custom_flag_name_19", "Custom Flag 19"),
-("custom_flag_name_20", "Custom Flag 20"),
-("custom_flag_name_21", "Custom Flag 21"),
-("custom_flag_name_22", "Custom Flag 22"),
-("custom_flag_name_23", "Custom Flag 23"),
-("custom_flag_name_24", "Custom Flag 24"),
-("custom_flag_name_25", "Custom Flag 25"),
-("custom_flag_name_26", "Custom Flag 26"),
-("custom_flag_name_27", "Custom Flag 27"),
-("custom_flag_name_28", "Custom Flag 28"),
-("custom_flag_name_29", "Custom Flag 29"),
-("custom_flag_name_30", "Custom Flag 30"),
-("custom_flag_name_31", "Custom Flag 31"),
-("custom_flag_name_32", "Custom Flag 32"),
-("custom_flag_name_33", "Custom Flag 33"),
-("custom_flag_name_34", "Custom Flag 34"),
-("custom_flag_name_35", "Custom Flag 35"),
-("custom_flag_name_36", "Custom Flag 36"),
-("custom_flag_name_37", "Custom Flag 37"),
-("custom_flag_name_38", "Custom Flag 38"),
-("custom_flag_name_39", "Custom Flag 39"),
-("custom_flag_name_40", "Custom Flag 40"),
-("custom_flag_names_end", "{!}custom_flag_names_end"),
-
-("welcome_message_server","Welcome, {s3}, your user ID is {reg44}. Please follow the server rules and enjoy your stay!"), #patch1115 fix 10/2
 ]
